@@ -1,0 +1,34 @@
+﻿.why {
+  background: url(../../../content/images/bgWhy.png) no-repeat;
+  background-size: 100% 100%; }
+  .why .content {
+    background: url(../../../content/images/benefits.png) no-repeat;
+    background-size: 100% 100%;
+    height: 80rem;
+    margin: 5% auto; }
+    .why .content h2 {
+      font-size: 8rem;
+      padding-top: 7%;
+      padding-right: 10%; }
+    .why .content p {
+      margin-top: 3%;
+      font-size: 1.7rem; }
+    .why .content ul {
+      list-style: none; }
+      .why .content ul li:before {
+        content: '';
+        background: url(../../../content/images/check.png) no-repeat;
+        background-size: 100% 100%;
+        width: 40px;
+        height: 31px;
+        position: relative;
+        display: inline-block;
+        margin-left: 1rem; }
+      .why .content ul li h3 {
+        font-size: 3rem;
+        display: inline-block; }
+      .why .content ul li p {
+        margin-top: 0;
+        padding-right: 9%;
+        font-size: 2rem; }
+

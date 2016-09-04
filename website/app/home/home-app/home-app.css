@@ -1,0 +1,18 @@
+﻿.home-app {
+  background: url(../../../content/images/theProblemBG.png) no-repeat;
+  height: 80rem;
+  background-position: 100% 0;
+  background-size: 100% 90%;
+  padding-top: 5%; }
+  .home-app h2 {
+    color: #aeb2b3;
+    font-size: 12rem;
+    padding-right: 5%; }
+  .home-app label {
+    margin-top: 5%;
+    font-size: 3rem; }
+    .home-app label span {
+      display: block; }
+  .home-app img {
+    width: 100%; }
+

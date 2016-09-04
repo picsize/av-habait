@@ -1,0 +1,15 @@
+﻿
+aside {
+    height: 100%;
+    min-height: 100%;
+    
+    article {
+        &:not(:first-child) {
+            margin-top: 7rem;
+        }
+
+        img{
+            width:100%;
+        }
+    }
+}

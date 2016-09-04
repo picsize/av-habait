@@ -1,0 +1,62 @@
+﻿[
+  {
+    "outputFile": "website/app/big-banner/b.css",
+    "inputFile": "website/app/big-banner/b.scss"
+  },
+  {
+    "outputFile": "website/app/big-banner/big-banner.css",
+    "inputFile": "website/app/big-banner/big-banner.scss"
+  },
+  {
+    "outputFile": "website/app/menu/menu.css",
+    "inputFile": "website/app/menu/menu.scss"
+  },
+  {
+    "outputFile": "website/app/paid-members/paid-members.css",
+    "inputFile": "website/app/paid-members/paid-members.scss"
+  },
+  {
+    "outputFile": "website/app/search/search.css",
+    "inputFile": "website/app/search/search.scss"
+  },
+  {
+    "outputFile": "website/app/side-bar/side-bar.css",
+    "inputFile": "website/app/side-bar/side-bar.scss"
+  },
+  {
+    "outputFile": "website/app/home-categories/home-categories.css",
+    "inputFile": "website/app/home-categories/home-categories.scss"
+  },
+  {
+    "outputFile": "website/app/home/home-how-dows-it-works/home-how-dows-it-works.css",
+    "inputFile": "website/app/home/home-how-dows-it-works/home-how-dows-it-works.scss"
+  },
+  {
+    "outputFile": "website/app/home/paid-members/paid-members.css",
+    "inputFile": "website/app/home/paid-members/paid-members.scss"
+  },
+  {
+    "outputFile": "website/app/home/home-categories/home-categories.css",
+    "inputFile": "website/app/home/home-categories/home-categories.scss"
+  },
+  {
+    "outputFile": "website/app/home/home-how-dows-it-works/home-how-does-it-works.css",
+    "inputFile": "website/app/home/home-how-dows-it-works/home-how-does-it-works.scss"
+  },
+  {
+    "outputFile": "website/app/home/home-how-does-it-works/home-how-does-it-works.css",
+    "inputFile": "website/app/home/home-how-does-it-works/home-how-does-it-works.scss"
+  },
+  {
+    "outputFile": "website/app/home/why-shuold-i/why-shuold-i.css",
+    "inputFile": "website/app/home/why-shuold-i/why-shuold-i.scss"
+  },
+  {
+    "outputFile": "website/app/home/company-services/company-services.css",
+    "inputFile": "website/app/home/company-services/company-services.scss"
+  },
+  {
+    "outputFile": "website/app/home/home-app/home-app.css",
+    "inputFile": "website/app/home/home-app/home-app.scss"
+  }
+]

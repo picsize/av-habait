@@ -1,0 +1,63 @@
+﻿home-how-does-it-works {
+    h2 {
+        font-size: 9rem;
+        margin: 4rem;
+    }
+
+    .how {
+        background: url(../../../content/images/bgDottes.png) no-repeat;
+        background-size: 100% 100%;
+        padding-top: 2rem;
+        height: 51rem;
+
+        ul {
+            list-style: none;
+            margin: auto 0;
+
+            li {
+                font-size: 3rem;
+                display: inline-block;
+
+                &:not(:last-child):after {
+                    content: "";
+                    background: url(../../../content/images/leftArrow.png) no-repeat;
+                    display: inline-block;
+                    position: relative;
+                    width: 16px;
+                    height: 40px;
+                    background-size: 100% 100%;
+                    margin: 0 3rem;
+                    top: 1rem;
+                }
+            }
+        }
+
+        h3 {
+            color: #edebeb;
+            font-size: 12rem;
+            margin-top: 0;
+        }
+
+        .path_120, .path_rating {
+            background:url(../../../content/images/pathFast.png) no-repeat;
+            height:17rem;
+            background-size:100% 100%;
+                padding-top: 8.2rem;
+
+            h4{
+                    font-size:2.5rem;
+            }
+
+            p{
+                font-size:2rem;
+            }
+        }
+
+        .path_rating{
+            background:url(../../../content/images/pathReview.png) no-repeat;
+            background-size:100% 100%;
+        }
+
+       
+    }
+}

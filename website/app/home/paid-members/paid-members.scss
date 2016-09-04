@@ -1,0 +1,42 @@
+﻿
+.paid-members {
+    background: url(../../../content/images/strip.jpg) no-repeat;
+    width: 100%;
+    background-size:100% 100%;
+
+    .paid-memeber {
+        padding-bottom: 1rem;
+
+        .member-img {
+            img {
+                border-radius: 50%;
+                width: 110px;
+                height: 110px;
+                border: 7px double rgb(41, 77, 82);
+                display: block;
+                margin: 0 auto;
+            }
+
+            &:after {
+                content: "";
+                background-color: #294d52;
+                width: 2px;
+                height: 2.5rem;
+                display: inline-block;
+                margin-right: 10.5rem;
+            }
+        }
+
+        .member-details {
+            span {
+                display: block;
+                font-size: 2rem;
+
+                small {
+                    display: block;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
