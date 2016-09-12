@@ -1,0 +1,42 @@
+﻿
+
+.navbar {
+    border-radius: 0 !important;
+    padding: 0.7rem 0;
+    background: #fff;
+    margin-bottom:0;
+}
+
+.quickMenu img {
+    width: 100%;
+}
+
+.logo {
+    width: 70%;
+    margin-right: 15%;
+    margin-top: 9%;
+}
+
+.register, .login {
+    text-indent: 36%;
+}
+
+.login {
+    background-image: url(/website/content/images/login.png);
+    background-repeat:no-repeat;
+    background-position: 100% 0;
+    background-size: contain;
+}
+
+.register {
+    background-image: url(/website/content/images/register.png);
+    background-repeat:no-repeat;
+    background-position: 100% 0;
+    background-size: contain;
+}
+
+    /*.register:after {
+        content: "|";
+        margin: 0 1rem;
+    }*/
+

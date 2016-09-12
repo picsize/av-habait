@@ -1,0 +1,209 @@
+﻿
+.big-banner {
+    height: 81rem;
+    background: url("/website/content/images/talImg.png") no-repeat;
+    background-size: 100%;
+
+    h1 {
+        font-size: 7rem;
+        line-height: 92px;
+        color: rgba(255, 255, 255, 0.69);
+        margin: 7rem 7rem 6rem 0;
+    }
+
+
+    .fast, .rating {
+        background-size: contain !important;
+        height: 33rem;
+        background-position: 100% !important;
+    }
+
+    .fast {
+        background: url('/website/content/images/120.png') no-repeat;
+        margin-right: 12rem;
+    }
+
+    .rating {
+        background: url('/website/content/images/rating.png') no-repeat;
+    }
+
+    .bottom-text {
+        width: 60%;
+        color: #fff;
+        font-weight: bold;
+        font-size: 2.3rem;
+        text-align: center;
+        margin: 17.5rem 2rem 0 0;
+    }
+
+    span {
+        display: block;
+
+        &.how {
+            color: rgb(19, 43, 68);
+            font-size: 2rem;
+        }
+    }
+
+    .scroll-arrow {
+        width: 50%;
+        padding-top: 7rem;
+    }
+}
+
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) and (max-width: 1900px)  {
+    .big-banner {
+        height: 52.5rem;
+
+        h1 {
+            font-size: 4rem;
+            line-height: 43px;
+            margin: 1rem 7rem 0rem 0;
+        }
+
+
+        .fast, .rating {
+            background-size: contain !important;
+            height: 33rem;
+            background-position: 100% !important;
+        }
+
+        .fast {
+            margin-right: 3rem;
+        }
+
+        .rating {
+            margin-right: 5rem;
+        }
+
+        .bottom-text {
+            font-size: 1.7rem;
+            margin: 17.5rem 5rem 0 0;
+        }
+
+        span {
+            display: block;
+
+            &.how {
+                margin-top: -5rem;
+                color: rgb(19, 43, 68);
+                font-size: 2rem;
+            }
+        }
+
+        .scroll-arrow {
+            padding-top: 6rem;
+        }
+    }
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    .big-banner {
+        height: 34rem;
+        background-size: 100% 100%;
+
+        h1 {
+            font-size: 3rem;
+            line-height: 43px;
+            margin: 0rem -26rem -9rem 0px;
+        }
+
+        .fast, .rating {
+            height: auto;
+            background-position: center !important;
+            margin-top: 8rem;
+        }
+
+        .fast {
+            margin-right: -7rem;
+        }
+
+        .rating {
+            margin-right: -13rem;
+        }
+
+        .bottom-text {
+            width: 100%;
+            font-size: 1.5rem;
+            text-align: center;
+            margin: 0;
+            padding: 3rem 0;
+
+            span:first-child {
+                padding-top: 9rem;
+            }
+        }
+
+        span {
+            &.how {
+                font-size: 1.5rem;
+                margin-top: -2rem;
+                margin-right: 2rem;
+
+                & + img {
+                    width: 20%;
+                    margin-right: 2rem;
+                }
+            }
+        }
+    }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+    .big-banner {
+        height: 60rem;
+        background-size: contain;
+        background-color: rgba(142,141,142,0.5);
+
+        h1 {
+            font-size: 3rem;
+            line-height: 43px;
+            margin: 1rem -18rem -9rem 0px;
+        }
+
+        .fast, .rating {
+            height: auto;
+            background-position: center !important;
+            margin-top: 22rem;
+            margin-right: auto;
+        }
+
+        .bottom-text {
+            width: 100%;
+            font-size: 1.5rem;
+            text-align: center;
+            margin: 0;
+            padding: 3rem 0;
+
+            span:first-child {
+                padding-top: 9rem;
+            }
+        }
+
+        span {
+            &.how {
+                font-size: 2rem;
+                margin-top: auto;
+                margin-right: 10rem;
+                width: 100%;
+
+                & + img {
+                    width: 100%;
+                    margin-right: 10rem;
+                }
+            }
+        }
+    }
+}
