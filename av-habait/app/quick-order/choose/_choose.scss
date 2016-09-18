@@ -1,0 +1,99 @@
+﻿
+.choose {
+    background: url(/content/images/strip.jpg) no-repeat;
+    width: 100%;
+    background-size: 100% 100%;
+
+    h1 {
+        color: #3d3f40;
+        font-size: 8rem;
+    }
+
+    ul {
+        list-style: none;
+        margin: auto 0;
+
+        li {
+            font-size: 3rem;
+            display: inline-block;
+
+            &:not(:last-child):after {
+                content: "";
+                background: url(/content/images/leftArrow.png) no-repeat;
+                display: inline-block;
+                position: relative;
+                width: 16px;
+                height: 40px;
+                background-size: 100% 100%;
+                margin: 0 3rem;
+                top: 1rem;
+            }
+        }
+    }
+
+    .path_120 {
+        background: url(/website/content/images/pathFast.png) no-repeat;
+        height: 17rem;
+        position: relative;
+        top: 4rem;
+        right: 5rem;
+
+        &:before {
+            content: "";
+            width: 72px;
+            height: 2px;
+            background: #3d3f40;
+            display: inline-block;
+            position: absolute;
+            right: -7rem;
+            top: 11rem;
+        }
+
+        span {
+            display: block;
+            font-size: 2rem;
+
+            &.font-bold {
+                font-size: 3rem;
+                padding-top: 9rem;
+            }
+        }
+    }
+}
+
+/* X-Large desktops and laptops */
+@media (min-width:1600px) {
+    .search-holder{
+        margin-right:22%;
+    }
+
+    .without-header-text{
+        .search-holder{
+                padding-top: 2%;
+        }
+
+        .path_120{
+            top:0;
+        }
+    }
+}
+
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) and (max-width:1600px) {
+}
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+}

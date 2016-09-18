@@ -1,0 +1,29 @@
+﻿
+<section class="home-categories container-fluid">
+    <div class="row clearfix">
+        <div class="col-xs-12">
+            <h2 class="font-bold">סיווגים ותקלות:</h2>
+        </div>
+    </div>
+    <div class="row clearfix">
+        <div class="col-xs-12 col-lg-11 col-md-11 col-sm-11">
+            <div class="col-xs-12 col-lg-6 col-md-6 col-sm-6 col-xl-4 category-holder" ng-repeat="category in models.categories track by $index" ng-class="{'hide-all': $index>11}">
+                <div class="category" style="background-image: url(/content/images/cat/{{category.Img}}) ">
+                    <h3 class="font-bold">{{category.Name}}</h3>
+                    <ul>
+                        <li ng-repeat="subCategory in category.SubCategory track by $index" ng-hide="$index>7" ng-class="{'hidden-subcategory': $index>7}">
+                            <a href="#">{{subCategory.Name}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-11 text-left all-categories">
+                <span class="font-bold" ng-click="functions.showAll()">לכל הסיווגים</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+

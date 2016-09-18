@@ -1,0 +1,91 @@
+﻿html, body {
+    height: 100%;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.white-btn {
+    border: none;
+    background-color: #fff;
+}
+
+.orange-color {
+    color: rgb(240, 131, 74);
+}
+
+.center-block {
+    float: none;
+}
+
+.color-white {
+    color: #fff;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.font-light {
+    font-weight: lighter;
+}
+
+.light-gray {
+    color: #ebe9e9;
+}
+
+.big-font {
+    font-size: 9rem;
+}
+
+.bigger-font{
+    font-size:12rem;
+}
+
+#sidebar {
+    border-right: 1px solid #142c45;
+    height: 100%;
+    min-height: 100%;
+    margin-top: 2rem;
+}
+
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.col-xs-15 {
+    width: 20%;
+    float: right;
+}
+
+@media (min-width: 768px) {
+    .col-sm-15 {
+        width: 20%;
+        float: right;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-15 {
+        width: 20%;
+        float: right;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-15 {
+        width: 20%;
+        float: right;
+    }
+}

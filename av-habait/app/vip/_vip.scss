@@ -1,0 +1,107 @@
+﻿
+.for-home {
+    .page-image {
+        &:after {
+            content: "";
+            width: 150px;
+            height: 3px;
+            background: #6f81a9;
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            top: 13rem;
+        }
+    }
+
+    h1 {
+        color: #6f81a9;
+
+        > span {
+            display: block;
+
+            &:last-of-type {
+                margin-right: 16%;
+            }
+        }
+    }
+
+    .gold {
+        background-image: url(/content/images/goldpro.png);
+    }
+
+    .regular {
+        background-image: url(/content/images/regularpro.png);
+    }
+
+    .vip {
+        background-image: url(/content/images/vippro.png);
+    }
+
+    .gold, .regular, .vip {
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 18rem;
+        margin-bottom: 5%;
+        padding-top: 6rem;
+        padding-bottom: 3rem;
+
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                color: #337ab7;
+                display: inline-block;
+
+                &:after {
+                    content: ', ';
+                }
+            }
+        }
+    }
+
+    .service {
+        margin-bottom: 5%;
+
+        &:first-of-type h3 {
+            background-image: url(/content/images/private-home/caricon.png);
+            background-position: 29% 100%;
+        }
+
+        &:nth-of-type(2) h3 {
+            background-image: url(/content/images/private-home/fixicon.png);
+            background-position: 11% 100%;
+            background-size: 13% 100%;
+        }
+
+        &:nth-of-type(3) h3 {
+            background-image: url(/content/images/private-home/joyicon.png);
+            background-position: 29% 100%;
+        }
+
+        &:nth-of-type(4) h3 {
+            background-image: url(/content/images/private-home/animalicon.png);
+            background-position: 29% 100%;
+        }
+
+        &:last-of-type h3 {
+            background-image: url(/content/images/private-home/deliveryicon.png);
+            background-position: 15% 100%;
+        }
+
+        h3 {
+            font-size: 4rem;
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            & + ul {
+                list-style: none;
+                padding: 0;
+
+                li {
+                    color: #337ab7;
+                }
+            }
+        }
+    }
+}

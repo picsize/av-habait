@@ -1,0 +1,66 @@
+﻿.price {
+    h1 {
+        font-size: 6rem;
+        margin-top: 4rem;
+
+        &:before {
+            content: "";
+            width: 111px;
+            height: 2px;
+            background: #3d3f40;
+            display: inline-block;
+            position: absolute;
+            right: -2rem;
+            top: 8rem;
+        }
+    }
+
+    .calculator {
+        background-color: #ebe9e9;
+        padding: 5%;
+        border-radius: 2rem;
+    }
+
+    .get-price {
+        background-image: url(/content/images/lines.png);
+        padding: 1% 0 3% 0;
+        margin-top:5%;
+
+        h2{
+            font-size:6rem;
+            margin-top: 40%;
+        }
+
+        .the-price{
+            font-size:4rem;
+        }
+
+        h3{
+            opacity:0.8;
+        }
+
+        ul {
+            list-style: none;
+            padding:0;
+
+            li {
+                font-size: 2.5rem;
+                margin-top:2%;
+
+                &:before {
+                    content: '';
+                    background: url(/website/content/images/checkbenefit.png) no-repeat;
+                    width: 40px;
+                    height: 40px;
+                    display: inline-block;
+                    background-size: contain;
+                    margin-left: 2%;
+                }
+            }
+        }
+
+        input{
+            margin-top:3%;
+        }
+    }
+}
