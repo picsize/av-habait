@@ -1152,7 +1152,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="cms\" />
     <Folder Include="lib\angular-1.5.8\i18n\ngLocale\" />
   </ItemGroup>
   <PropertyGroup>
