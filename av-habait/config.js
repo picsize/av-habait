@@ -44,8 +44,17 @@ avBait.config(function ($locationProvider, $stateProvider, $urlRouterProvider, $
             data: { pageTitle: 'קבל הצעת מחיר' }
         })
         .state('website.rating', {
+            abstract: true,
+            templateUrl: 'app/rating/rating.html'
+        })
+        .state('website.rating.main', {
             url: '/דירוגים',
-            templateUrl: 'app/rating/rating.html',
+            templateUrl: 'app/rating/main.html',
+            data: { pageTitle: 'צפייה בדירוגים של בעלי המקצוע' }
+        })
+        .state('website.rating.member', {
+            url: '/דירוגים/:category/:subCategory',
+            templateUrl: 'app/rating/members.html',
             data: { pageTitle: 'צפייה בדירוגים של בעלי המקצוע' }
         })
         .state('website.vip', {
@@ -59,10 +68,10 @@ avBait.config(function ($locationProvider, $stateProvider, $urlRouterProvider, $
         })
 
 
-    //$locationProvider.html5Mode({
-    //    enabled: true,
-    //    requireBase: true
-    //});
+    $locationProvider.html5Mode({
+        enabled: true,
+        requireBase: true
+    });
 
 });
 

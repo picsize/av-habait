@@ -1,4 +1,5 @@
-﻿html, body {
+﻿@charset "UTF-8";
+html, body {
   height: 100%; }
 
 .float-left {
@@ -698,21 +699,21 @@ home-how-does-it-works .how {
     margin-top: 3%; }
 
 .banner-rating {
-  height: 45rem;
-  background: url(/content/images/talImg.png) no-repeat;
-  background-size: 100%;
-  background-position: 100% 45%; }
+  background: url(/content/images/ratingBanner.png) no-repeat;
+  background-size: 100% 100%;
+  padding: 1% 0; }
   .banner-rating img {
-    width: 90px; }
+    width: 100%;
+    margin-top: 2rem; }
+  .banner-rating span {
+    font-size: 4rem; }
   .banner-rating .col-xs-4 span {
     display: block;
     color: #f2f1f1;
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 3rem; }
     .banner-rating .col-xs-4 span:first-of-type {
       margin-top: 1rem; }
-  .banner-rating .col-xl-6 {
-    margin-top: 17rem; }
 
 /* Large desktops and laptops */
 /* Landscape tablets and medium desktops */
@@ -788,4 +789,110 @@ home-how-does-it-works .how {
       padding: 0; }
       .for-home .service h3 + ul li {
         color: #337ab7; }
+
+.breadcrumbs ul {
+  list-style: none;
+  padding: 0; }
+  .breadcrumbs ul li {
+    display: inline-block; }
+    .breadcrumbs ul li:not(:last-child):after {
+      content: '❭';
+      margin: 0 0.5rem; }
+
+/* Large desktops and laptops */
+/* Landscape tablets and medium desktops */
+/* Portrait tablets and small desktops */
+/* Landscape phones and portrait tablets */
+/* Portrait phones and smaller */
+.category-text h1 {
+  color: #337ab7; }
+  .category-text h1 + p {
+    color: #337ab7; }
+
+/* Large desktops and laptops */
+/* Landscape tablets and medium desktops */
+/* Portrait tablets and small desktops */
+/* Landscape phones and portrait tablets */
+/* Portrait phones and smaller */
+.members-list .col-xs-8 {
+  background-color: #ebe9e9;
+  border-radius: 1.4rem; }
+
+.members-list .member {
+  list-style: none;
+  padding: 0; }
+  .members-list .member li {
+    padding: 1%; }
+    .members-list .member li:not(:last-child) {
+      border-bottom: 1px solid #d0cfcf; }
+    .members-list .member li > div {
+      display: inline-block;
+      width: 13.8%;
+      color: #337ab7;
+      height: 70px; }
+      .members-list .member li > div:not(:last-child) {
+        border-left: 1px solid #d0cfcf; }
+      .members-list .member li > div.member-image img {
+        width: 60%;
+        border: 1px solid #000;
+        border-radius: 50%; }
+      .members-list .member li > div.member-image span {
+        /*margin-right: 1.5rem;*/ }
+        .members-list .member li > div.member-image span:before {
+          content: '';
+          width: 17px;
+          height: 1px;
+          background-color: #337ab7;
+          position: relative;
+          top: -0.4rem;
+          right: -0.5rem;
+          display: inline-block; }
+      .members-list .member li > div.member-position span {
+        display: block; }
+        .members-list .member li > div.member-position span:first-child {
+          position: relative;
+          top: 2rem; }
+      .members-list .member li > div.member-rating {
+        position: relative;
+        top: 1.5rem; }
+        .members-list .member li > div.member-rating span {
+          display: block; }
+          .members-list .member li > div.member-rating span:last-of-type {
+            font-size: 3rem; }
+      .members-list .member li > div.member-availability {
+        position: relative;
+        top: 0.5rem; }
+        .members-list .member li > div.member-availability > span {
+          display: block;
+          position: relative;
+          /*top:2rem;*/ }
+        .members-list .member li > div.member-availability > div {
+          width: 80%;
+          position: relative;
+          top: 1rem;
+          margin: 0 auto; }
+          .members-list .member li > div.member-availability > div .progress {
+            /*height: 10px;*/
+            margin-bottom: 0; }
+      .members-list .member li > div.member-reviews span {
+        display: block; }
+      .members-list .member li > div.member-price {
+        position: relative;
+        top: 1.5rem; }
+        .members-list .member li > div.member-price span {
+          display: block; }
+          .members-list .member li > div.member-price span:last-child {
+            font-size: 3rem; }
+            .members-list .member li > div.member-price span:last-child small {
+              font-size: 1.5rem; }
+      .members-list .member li > div.member-phone span {
+        display: block; }
+        .members-list .member li > div.member-phone span:last-child {
+          font-size: 2rem; }
+
+/* Large desktops and laptops */
+/* Landscape tablets and medium desktops */
+/* Portrait tablets and small desktops */
+/* Landscape phones and portrait tablets */
+/* Portrait phones and smaller */
 

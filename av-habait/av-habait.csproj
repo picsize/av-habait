@@ -118,6 +118,8 @@
     <Content Include="app\banner-rating\banner-rating.js" />
     <Content Include="app\big-banner\big-banner.html" />
     <Content Include="app\big-banner\big-banner.js" />
+    <Content Include="app\breadcrumbs\breadcrumbs.html" />
+    <Content Include="app\breadcrumbs\breadcrumbs.js" />
     <Content Include="app\directives\title.js" />
     <Content Include="app\home\company-services\company-services.html" />
     <Content Include="app\home\company-services\company-services.js" />
@@ -143,6 +145,14 @@
     <Content Include="app\quick-order\get-price.html" />
     <Content Include="app\quick-order\main.html" />
     <Content Include="app\quick-order\quick-order.html" />
+    <Content Include="app\rating\members-list\members-list.html" />
+    <Content Include="app\rating\members-list\members-list.js" />
+    <Content Include="app\rating\category-text\category-text.html" />
+    <Content Include="app\rating\category-text\category-text.js" />
+    <Content Include="app\rating\categories\categories.html" />
+    <Content Include="app\rating\categories\categories.js" />
+    <Content Include="app\rating\members.html" />
+    <Content Include="app\rating\main.html" />
     <Content Include="app\rating\rating.html" />
     <Content Include="app\search\search.html" />
     <Content Include="app\search\search.js" />
@@ -212,6 +222,7 @@
     <Content Include="content\images\productBG.png" />
     <Content Include="content\images\quickOrderIcon.png" />
     <Content Include="content\images\rating.png" />
+    <Content Include="content\images\ratingBanner.png" />
     <Content Include="content\images\ratingBannerIcon.png" />
     <Content Include="content\images\ratingIcon.png" />
     <Content Include="content\images\register.png" />
@@ -1048,6 +1059,10 @@
     <Content Include="app\search\_search.scss" />
     <Content Include="app\side-bar\_side-bar.scss" />
     <Content Include="app\vip\_vip.scss" />
+    <Content Include="app\breadcrumbs\_breadcrumbs.scss" />
+    <Content Include="app\rating\categories\_categories.scss" />
+    <Content Include="app\rating\category-text\_category-text.scss" />
+    <Content Include="app\rating\members-list\_members-list.scss" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>

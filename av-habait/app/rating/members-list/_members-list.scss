@@ -1,0 +1,156 @@
+﻿
+.members-list {
+
+    .col-xs-8 {
+        background-color: #ebe9e9;
+        border-radius: 1.4rem;
+    }
+
+    .member {
+        list-style: none;
+        padding: 0;
+
+
+        li {
+            padding: 1%;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid #d0cfcf;
+            }
+
+            > div {
+                display: inline-block;
+                width: 13.8%;
+                color: #337ab7;
+                height: 70px;
+
+                &:not(:last-child) {
+                    border-left: 1px solid #d0cfcf;
+                }
+
+                &.member-image {
+                    img {
+                        width: 60%;
+                        border: 1px solid #000;
+                        border-radius: 50%;
+                    }
+
+                    span {
+                        /*margin-right: 1.5rem;*/
+                        &:before {
+                            content: '';
+                            width: 17px;
+                            height: 1px;
+                            background-color: #337ab7;
+                            position: relative;
+                            top: -0.4rem;
+                            right: -0.5rem;
+                            display: inline-block;
+                        }
+                    }
+                }
+
+                &.member-position {
+                    span {
+                        display: block;
+
+                        &:first-child {
+                            position: relative;
+                            top: 2rem;
+                        }
+                    }
+                }
+
+                &.member-rating {
+                    position: relative;
+                    top: 1.5rem;
+
+                    span {
+                        display: block;
+
+                        &:last-of-type {
+                            font-size: 3rem;
+                        }
+                    }
+                }
+
+                &.member-availability {
+                    position: relative;
+                    top: 0.5rem;
+
+                    > span {
+                        display: block;
+                        position: relative;
+                        /*top:2rem;*/
+                    }
+
+                    > div {
+                        width: 80%;
+                        position: relative;
+                        top: 1rem;
+                        margin: 0 auto;
+
+                        .progress {
+                            /*height: 10px;*/
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+
+                &.member-reviews {
+                    span {
+                        display: block;
+                    }
+                }
+
+                &.member-price {
+                    position: relative;
+                    top: 1.5rem;
+
+                    span {
+                        display: block;
+
+                        &:last-child {
+                            font-size: 3rem;
+
+                            small {
+                                font-size: 1.5rem;
+                            }
+                        }
+                    }
+                }
+
+                &.member-phone {
+                    span {
+                        display: block;
+
+                        &:last-child {
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+}

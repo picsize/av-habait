@@ -1,29 +1,29 @@
 ﻿
 .banner-rating {
-    height: 45rem;
-    background: url(/content/images/talImg.png) no-repeat;
-    background-size: 100%;
-    background-position: 100% 45%;
+    background: url(/content/images/ratingBanner.png) no-repeat;
+    background-size: 100% 100%;
+    padding: 1% 0;
 
     img {
-        width: 90px;
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    span {
+        font-size: 4rem;
     }
 
     .col-xs-4 {
         span {
             display: block;
             color: #f2f1f1;
-            font-size: 2rem;
-            line-height:3rem;
+            font-size: 1.5rem;
+            line-height: 3rem;
 
-            &:first-of-type{
-                margin-top:1rem;
+            &:first-of-type {
+                margin-top: 1rem;
             }
         }
-    }
-
-    .col-xl-6 {
-        margin-top: 17rem;
     }
 }
 
