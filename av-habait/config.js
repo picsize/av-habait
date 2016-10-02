@@ -6,7 +6,8 @@
         'ngCookies',
         'ngAnimate',
         'ngTouch',
-        'angular-loading-bar'
+        'angular-loading-bar',
+        'angularLoad'
     ]);
 
 avBait.filter('to_trusted', ['$sce', function ($sce) {
@@ -15,7 +16,10 @@ avBait.filter('to_trusted', ['$sce', function ($sce) {
     };
 }]);
 
-avBait.config(function ($locationProvider, $stateProvider, $urlRouterProvider, $logProvider) {
+avBait.config(function ($locationProvider, $stateProvider, $urlRouterProvider, $logProvider, $compileProvider, $httpProvider) {
+
+    $compileProvider.debugInfoEnabled(false);
+    $httpProvider.useApplyAsync(true);
 
     $urlRouterProvider.otherwise('/');
 
@@ -57,6 +61,11 @@ avBait.config(function ($locationProvider, $stateProvider, $urlRouterProvider, $
             templateUrl: 'app/rating/members.html',
             data: { pageTitle: 'צפייה בדירוגים של בעלי המקצוע' }
         })
+        .state('website.member', {
+            url: '/בעלי מקצוע/:member',
+            templateUrl: 'app/members/member.html',
+            data: { pageTitle: 'פרטי בעל המקצוע' }
+        })
         .state('website.vip', {
             abstract: true,
             templateUrl: 'app/vip/main.html'
@@ -75,4 +84,6 @@ avBait.config(function ($locationProvider, $stateProvider, $urlRouterProvider, $
 
 });
 
-//angular.bootstrap(document, ['keepItApp']);
+//angular.element(document).ready(function () {
+//    angular.bootstrap(document, ['avBait']);
+//});

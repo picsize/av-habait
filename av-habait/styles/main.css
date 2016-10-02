@@ -36,6 +36,9 @@ html, body {
 .bigger-font {
   font-size: 12rem; }
 
+.gray-bg {
+  background-color: #ebe9e9; }
+
 #sidebar {
   border-right: 1px solid #142c45;
   height: 100%;
@@ -814,9 +817,16 @@ home-how-does-it-works .how {
 /* Portrait tablets and small desktops */
 /* Landscape phones and portrait tablets */
 /* Portrait phones and smaller */
-.members-list .col-xs-8 {
+.members-list .list-holder {
   background-color: #ebe9e9;
   border-radius: 1.4rem; }
+  .members-list .list-holder .list-title {
+    background-color: #dedfda;
+    padding: 1rem;
+    border-top-left-radius: 1.4rem;
+    border-top-right-radius: 1.4rem;
+    color: #337ab7;
+    font-size: 3rem; }
 
 .members-list .member {
   list-style: none;
@@ -885,10 +895,93 @@ home-how-does-it-works .how {
             font-size: 3rem; }
             .members-list .member li > div.member-price span:last-child small {
               font-size: 1.5rem; }
-      .members-list .member li > div.member-phone span {
-        display: block; }
-        .members-list .member li > div.member-phone span:last-child {
-          font-size: 2rem; }
+      .members-list .member li > div.member-phone {
+        position: relative;
+        top: 2.5rem;
+        right: 1rem; }
+        .members-list .member li > div.member-phone span {
+          display: block; }
+          .members-list .member li > div.member-phone span:last-child {
+            font-size: 2rem; }
+
+/* Large desktops and laptops */
+/* Landscape tablets and medium desktops */
+/* Portrait tablets and small desktops */
+/* Landscape phones and portrait tablets */
+/* Portrait phones and smaller */
+.member-page article {
+  color: #337ab7; }
+
+.member-page .right-side h1:before {
+  content: "";
+  width: 10%;
+  height: 2px;
+  background-color: #337ab7;
+  display: inline-block;
+  position: relative;
+  bottom: 0.7rem; }
+
+.member-page .right-side .info {
+  border-radius: 2rem;
+  padding: 4% 0; }
+  .member-page .right-side .info .info-block {
+    display: block; }
+    .member-page .right-side .info .info-block:not(.facebook) {
+      font-size: 2rem; }
+    .member-page .right-side .info .info-block label {
+      font-weight: bold; }
+
+.member-page .right-side .specialist {
+  border-left: 2px solid #ebe9e9; }
+  .member-page .right-side .specialist h2 {
+    text-decoration: underline; }
+  .member-page .right-side .specialist a {
+    display: block; }
+
+.member-page .middle img {
+  width: 50%;
+  border-radius: 50%; }
+
+.member-page .middle .member-rating-sum p {
+  font-size: 3rem; }
+  .member-page .middle .member-rating-sum p span {
+    font-size: 5rem; }
+
+.member-page .middle .member-info-sum {
+  padding: 0;
+  list-style: none; }
+  .member-page .middle .member-info-sum li {
+    display: inline-block;
+    width: 25%;
+    float: right;
+    border-left: 1px solid #ebe9e9; }
+    .member-page .middle .member-info-sum li:first-child {
+      border-right: 1px solid #ebe9e9; }
+    .member-page .middle .member-info-sum li label {
+      display: block;
+      text-decoration: underline;
+      font-weight: normal;
+      font-size: 1.5rem; }
+    .member-page .middle .member-info-sum li span {
+      font-size: 3rem; }
+
+.member-page .middle .member-position p {
+  color: #fff;
+  background-color: #7092b0; }
+
+/* Large desktops and laptops */
+/* Landscape tablets and medium desktops */
+/* Portrait tablets and small desktops */
+/* Landscape phones and portrait tablets */
+/* Portrait phones and smaller */
+.member-reviews .review {
+  margin-top: 2rem;
+  border-radius: 2rem;
+  padding-top: 1%; }
+  .member-reviews .review:last-of-type {
+    margin-bottom: 1rem; }
+  .member-reviews .review .about .client-name {
+    font-size: 1.8rem; }
 
 /* Large desktops and laptops */
 /* Landscape tablets and medium desktops */

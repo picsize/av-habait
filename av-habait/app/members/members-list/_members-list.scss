@@ -1,9 +1,18 @@
 ﻿
 .members-list {
 
-    .col-xs-8 {
+    .list-holder {
         background-color: #ebe9e9;
         border-radius: 1.4rem;
+
+        .list-title {
+            background-color: #dedfda;
+            padding: 1rem;
+            border-top-left-radius: 1.4rem;
+            border-top-right-radius: 1.4rem;
+            color:#337ab7;
+            font-size:3rem;
+        }
     }
 
     .member {
@@ -121,6 +130,10 @@
                 }
 
                 &.member-phone {
+                    position: relative;
+                    top: 2.5rem;
+                    right: 1rem;
+
                     span {
                         display: block;
 

@@ -134,6 +134,11 @@
     <Content Include="app\home\paid-members\paid-members.js" />
     <Content Include="app\home\why-shuold-i\why-shuold-i.html" />
     <Content Include="app\home\why-shuold-i\why-shuold-i.js" />
+    <Content Include="app\members\member-reviews\member-reviews.html" />
+    <Content Include="app\members\member-reviews\member-reviews.js" />
+    <Content Include="app\members\member-page\member-page.html" />
+    <Content Include="app\members\member-page\member-page.js" />
+    <Content Include="app\members\member.html" />
     <Content Include="app\menu\menu.html" />
     <Content Include="app\menu\menu.js" />
     <Content Include="app\price\price.html" />
@@ -145,8 +150,8 @@
     <Content Include="app\quick-order\get-price.html" />
     <Content Include="app\quick-order\main.html" />
     <Content Include="app\quick-order\quick-order.html" />
-    <Content Include="app\rating\members-list\members-list.html" />
-    <Content Include="app\rating\members-list\members-list.js" />
+    <Content Include="app\members\members-list\members-list.html" />
+    <Content Include="app\members\members-list\members-list.js" />
     <Content Include="app\rating\category-text\category-text.html" />
     <Content Include="app\rating\category-text\category-text.js" />
     <Content Include="app\rating\categories\categories.html" />
@@ -207,6 +212,7 @@
     <Content Include="content\images\orderGray.png" />
     <Content Include="content\images\pathFast.png" />
     <Content Include="content\images\pathReview.png" />
+    <Content Include="content\images\phone.png" />
     <Content Include="content\images\play.png" />
     <Content Include="content\images\private-home\animalicon.png" />
     <Content Include="content\images\private-home\animals.png" />
@@ -244,6 +250,7 @@
     <Content Include="lib\angular-1.5.8\angular-cookies.js" />
     <Content Include="lib\angular-1.5.8\angular-cookies.min.js" />
     <Content Include="lib\angular-1.5.8\angular-csp.css" />
+    <Content Include="lib\angular-1.5.8\angular-load.min.js" />
     <Content Include="lib\angular-1.5.8\angular-loader.js" />
     <Content Include="lib\angular-1.5.8\angular-loader.min.js" />
     <Content Include="lib\angular-1.5.8\angular-message-format.js" />
@@ -1062,7 +1069,9 @@
     <Content Include="app\breadcrumbs\_breadcrumbs.scss" />
     <Content Include="app\rating\categories\_categories.scss" />
     <Content Include="app\rating\category-text\_category-text.scss" />
-    <Content Include="app\rating\members-list\_members-list.scss" />
+    <Content Include="app\members\members-list\_members-list.scss" />
+    <Content Include="app\members\member-page\_member-page.scss" />
+    <Content Include="app\members\member-reviews\_member-reviews.scss" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
@@ -1133,6 +1142,12 @@
     <Content Include="lib\font-awesome-4.6.3\scss\_stacked.scss" />
     <Content Include="lib\font-awesome-4.6.3\scss\_variables.scss" />
     <None Include="Properties\PublishProfiles\ftp.pubxml" />
+    <Content Include="styles\main.css">
+      <DependentUpon>main.scss</DependentUpon>
+    </Content>
+    <Content Include="styles\main.min.css">
+      <DependentUpon>main.css</DependentUpon>
+    </Content>
     <Content Include="styles\main.scss" />
     <Content Include="styles\_common-settings.scss" />
     <None Include="Web.Debug.config">
@@ -1141,8 +1156,6 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <Content Include="styles\main.css" />
-    <Content Include="styles\main.min.css" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="scripts\ai.0.22.19-build00125.js" />
