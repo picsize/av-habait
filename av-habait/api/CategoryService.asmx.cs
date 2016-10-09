@@ -22,33 +22,32 @@ namespace av_habait.website.api
         private readonly User _user = new User();
         private readonly Business _business = new Business();
         private readonly Category _category = new Category();
-        private readonly SubCategory _subCategory = new SubCategory();
         private readonly Order _order = new Order();
         private readonly Route _route = new Route();
         private readonly Page _page = new Page();
         private readonly SmtpHandler _emailer = new SmtpHandler();
 
-        [WebMethod]
-        [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
-        public string register(string email, string password, int userType, string fullName, string mobileNumber,
-        string homeNumber, string familyStatus, string gender, string address, string birthday, string image)
-        {
-            try
-            {
-                int num = _user.register(email, password, userType, fullName, mobileNumber, homeNumber, char.Parse(familyStatus), char.Parse(gender), address, DateTime.Parse(birthday), image);
-                Dictionary<string, object> res = new Dictionary<string, object>();
-                res.Add("state", num);
+        //[WebMethod]
+        //[ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+        //public string register(string email, string password, int userType, string fullName, string mobileNumber,
+        //string homeNumber, string familyStatus, string gender, string address, string birthday, string image)
+        //{
+        //    try
+        //    {
+        //        int num = _user.register(email, password, userType, fullName, mobileNumber, homeNumber, char.Parse(familyStatus), char.Parse(gender), address, DateTime.Parse(birthday), image);
+        //        Dictionary<string, object> res = new Dictionary<string, object>();
+        //        res.Add("state", num);
 
-                string msg = string.Format("ברכות! נרשמת בהצלחה לאב הבית. המהפיכה בשוק בעלי המקצוע התחילה. אל תישארו מאחור");
+        //        string msg = string.Format("ברכות! נרשמת בהצלחה לאב הבית. המהפיכה בשוק בעלי המקצוע התחילה. אל תישארו מאחור");
 
-                res.Add("emailComfirmation", _emailer.sendEmail(email, "הרשמה לאתר אב הבית", msg));
-                return _api.convertToJson(res);
-            }
-            catch (Exception ex)
-            {
-                return _api.createExceptionJson(ex);
-            }
-        }
+        //        res.Add("emailComfirmation", _emailer.sendEmail(email, "הרשמה לאתר אב הבית", msg));
+        //        return _api.convertToJson(res);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return _api.createExceptionJson(ex);
+        //    }
+        //}
 
         [WebMethod]
         [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
@@ -112,17 +111,13 @@ namespace av_habait.website.api
             try
             {
                 List<Category> categories = _category.getAll();
+                List<Category> parents = categories.FindAll(s => s.ParentId == 0);
                 List<Category> all = new List<Category>();
 
-                foreach (Category cat in categories)
+                foreach (Category category in parents)
                 {
-                    all.Add(cat);
-                    cat.SubCategory = new List<SubCategory>();
-                    List<SubCategory> subs = _subCategory.getAll(string.Format("where ParentId = {0}", cat.Id));
-                    foreach (SubCategory sub in subs)
-                    {
-                        cat.SubCategory.Add(sub);
-                    }
+                    category.setSubCategories(categories.FindAll(s => s.ParentId == category.Id));
+                    all.Add(category);
                 }
 
                 Dictionary<string, object> res = new Dictionary<string, object>();
@@ -143,29 +138,57 @@ namespace av_habait.website.api
 
         [WebMethod]
         [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
-        public string getSubCategories(int categoryId)
+        public string getQuickOrdersCategories()
         {
             try
             {
+                List<Category> categories = _category.getQuickOrdersCategories();
+                List<Category> parents = categories.FindAll(s => s.ParentId == 0);
                 List<Category> all = new List<Category>();
-                List<SubCategory> subsTitle = _subCategory.getAllByTitle(string.Format("where ParentId = {0}", categoryId));
-                foreach (SubCategory title in subsTitle)
-                {
-                    all.Add((Category)title);
-                    title.SubCategory = new List<SubCategory>();
-                    List<SubCategory> subs = _subCategory.getAll(string.Format("where ParentId = {0} and Title = '{1}'", categoryId, title.Title));
-                    foreach (SubCategory sub in subs)
-                    {
-                        title.SubCategory.Add(sub);
-                    }
 
+                foreach (Category category in parents)
+                {
+                    category.setSubCategories(categories.FindAll(s => s.ParentId == category.Id));
+                    all.Add(category);
                 }
 
                 Dictionary<string, object> res = new Dictionary<string, object>();
                 if (all != null)
                 {
                     res.Add("state", 1);
-                    res.Add("subCategories", all);
+                    res.Add("categories", all);
+                }
+                else
+                    res.Add("state", 0);
+                return _api.convertToJson(res);
+            }
+            catch (Exception ex)
+            {
+                return _api.createExceptionJson(ex);
+            }
+        }
+
+        [WebMethod]
+        [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+        public string getSubCategoryInfo(string slug)
+        {
+            try
+            {
+                List<Category> categories = _category.getSubCategoryInfo(slug);
+                List<Category> parents = categories.FindAll(s => s.ParentId == 0);
+                List<Category> all = new List<Category>();
+
+                foreach (Category category in parents)
+                {
+                    category.setSubCategories(categories.FindAll(s => s.ParentId == category.Id));
+                    all.Add(category);
+                }
+
+                Dictionary<string, object> res = new Dictionary<string, object>();
+                if (categories != null)
+                {
+                    res.Add("state", 1);
+                    res.Add("category", all);
                 }
                 else
                     res.Add("state", 0);

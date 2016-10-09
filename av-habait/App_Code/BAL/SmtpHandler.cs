@@ -21,12 +21,12 @@ namespace av_habait.App_Code.BAL
 
         private void InitializeComponent()
         {
-            mail.From = new MailAddress("info@picsize.co.il");
+            mail.From = new MailAddress("postmaster@avbait.co.il", "אב הבית");
             mail.IsBodyHtml = true;
-            SmtpServer.Host = "mail.picsize.co.il";
+            SmtpServer.Host = "mail.avbait.co.il";
             SmtpServer.Port = 25;
             SmtpServer.UseDefaultCredentials = false;
-            SmtpServer.Credentials = new NetworkCredential("info@picsize.co.il", "picsize8914!");
+            SmtpServer.Credentials = new NetworkCredential("postmaster@avbait.co.il", "phexhhz8914!");
             SmtpServer.EnableSsl = false;
         }
 
@@ -41,6 +41,73 @@ namespace av_habait.App_Code.BAL
                     mail.To.Add(address);
                 }
 
+                mail.Subject = subject;
+                mail.Body = msg;
+
+                SmtpServer.Send(mail);
+
+                return "success";
+            }
+            catch (Exception e)
+            {
+                return "error:\n" + e.Message;
+            }
+        }
+
+        internal int sendOrder(string to, string subject, string msg)
+        {
+            try
+            {
+                InitializeComponent();
+                List<string> emailAddresses = to.Split(',').ToList();
+                foreach (var address in emailAddresses)
+                {
+                    mail.To.Add(address);
+                }
+
+                mail.Subject = subject;
+                mail.Body = msg;
+
+                SmtpServer.Send(mail);
+
+                return 1;
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+        }
+
+        internal string sendEmailToMassive(string to, string subject, string msg)
+        {
+            try
+            {
+                InitializeComponent();
+                List<string> emailAddresses = to.Split(',').ToList();
+                foreach (var address in emailAddresses)
+                {
+                    mail.To.Add(address);
+                }
+
+                mail.Subject = subject;
+                mail.Body = msg;
+
+                SmtpServer.Send(mail);
+
+                return "success";
+            }
+            catch (Exception e)
+            {
+                return "error:\n" + e.Message;
+            }
+        }
+
+        internal string sendEmail(string subject, string msg)
+        {
+            try
+            {
+                InitializeComponent();
+                mail.To.Add("topteclift@gmail.com");
                 mail.Subject = subject;
                 mail.Body = msg;
 

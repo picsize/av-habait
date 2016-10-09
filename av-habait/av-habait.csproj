@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
-  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.2\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.2\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -43,8 +43,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.AI.DependencyCollector, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -71,13 +71,13 @@
       <HintPath>..\packages\Microsoft.ApplicationInsights.2.1.0\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.2\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Net.Http" />
@@ -111,7 +111,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="api\BusinessService.asmx" />
     <Content Include="api\CategoryService.asmx" />
+    <Content Include="api\OrderService.asmx" />
     <Content Include="app\banner-quick\banner-quick.html" />
     <Content Include="app\banner-quick\banner-quick.js" />
     <Content Include="app\banner-rating\banner-rating.html" />
@@ -121,6 +123,7 @@
     <Content Include="app\breadcrumbs\breadcrumbs.html" />
     <Content Include="app\breadcrumbs\breadcrumbs.js" />
     <Content Include="app\directives\title.js" />
+    <Content Include="app\factories\service.js" />
     <Content Include="app\home\company-services\company-services.html" />
     <Content Include="app\home\company-services\company-services.js" />
     <Content Include="app\home\home-app\home-app.html" />
@@ -134,6 +137,8 @@
     <Content Include="app\home\paid-members\paid-members.js" />
     <Content Include="app\home\why-shuold-i\why-shuold-i.html" />
     <Content Include="app\home\why-shuold-i\why-shuold-i.js" />
+    <Content Include="app\members\add-member\add-member.html" />
+    <Content Include="app\members\add-member\add-member.js" />
     <Content Include="app\members\member-reviews\member-reviews.html" />
     <Content Include="app\members\member-reviews\member-reviews.js" />
     <Content Include="app\members\member-page\member-page.html" />
@@ -141,8 +146,11 @@
     <Content Include="app\members\member.html" />
     <Content Include="app\menu\menu.html" />
     <Content Include="app\menu\menu.js" />
-    <Content Include="app\price\price.html" />
-    <Content Include="app\price\price.js" />
+    <Content Include="app\pages\add-member.html" />
+    <Content Include="app\quick-order\order\order.html" />
+    <Content Include="app\quick-order\order\order.js" />
+    <Content Include="app\quick-order\price\price.html" />
+    <Content Include="app\quick-order\price\price.js" />
     <Content Include="app\quick-order\categories\categories.html" />
     <Content Include="app\quick-order\categories\categories.js" />
     <Content Include="app\quick-order\choose\choose.html" />
@@ -1060,7 +1068,7 @@
     <Content Include="app\home\paid-members\_paid-members.scss" />
     <Content Include="app\home\why-shuold-i\_why-shuold-i.scss" />
     <Content Include="app\menu\_menu.scss" />
-    <Content Include="app\price\_price.scss" />
+    <Content Include="app\quick-order\price\_price.scss" />
     <Content Include="app\quick-order\categories\_categories.scss" />
     <Content Include="app\quick-order\choose\_choose.scss" />
     <Content Include="app\search\_search.scss" />
@@ -1072,6 +1080,8 @@
     <Content Include="app\members\members-list\_members-list.scss" />
     <Content Include="app\members\member-page\_member-page.scss" />
     <Content Include="app\members\member-reviews\_member-reviews.scss" />
+    <Content Include="app\quick-order\order\_order.scss" />
+    <Content Include="app\members\add-member\_add-member.scss" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
@@ -1163,15 +1173,22 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="api\BusinessService.asmx.cs">
+      <DependentUpon>BusinessService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="api\CategoryService.asmx.cs">
       <DependentUpon>CategoryService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="api\OrderService.asmx.cs">
+      <DependentUpon>OrderService.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="App_Code\BAL\Business.cs" />
     <Compile Include="App_Code\BAL\Category.cs" />
     <Compile Include="App_Code\DAL\DB.cs" />
     <Compile Include="App_Code\BAL\Service.cs" />
-    <Compile Include="App_Code\BAL\SubCategory.cs" />
     <Compile Include="App_Code\BAL\User.cs" />
     <Compile Include="App_Code\BAL\Order.cs" />
     <Compile Include="App_Code\BAL\Page.cs" />
@@ -1180,6 +1197,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="app\categories\" />
     <Folder Include="lib\angular-1.5.8\i18n\ngLocale\" />
   </ItemGroup>
   <PropertyGroup>
@@ -1211,8 +1229,8 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.2\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.2\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

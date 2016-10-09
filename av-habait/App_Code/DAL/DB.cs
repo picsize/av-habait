@@ -170,7 +170,7 @@ namespace av_habait.App_Code.DAL
         internal List<Category> getAllCategories()
         {
             SqlConnection con = Connect();
-            string commandText = "select * from dbo.category order by Name";
+            string commandText = "select * from categoryInfo order by ViewOrder";
             SqlCommand cmd = CreateCommand(commandText, con);
             DataTable dt = Select(cmd);
             List<Category> categories = ConvertDataTable<Category>(dt);
@@ -178,27 +178,26 @@ namespace av_habait.App_Code.DAL
             return categories;
         }
 
-
-        internal List<SubCategory> getAllSubCategories(string where)
+        internal List<Category> getQuickOrdersCategories()
         {
             SqlConnection con = Connect();
-            string commandText = string.Format("select * from dbo.subCategory {0} order by Title", where);
+            string commandText = "select * from categoryInfo where IsQuickOrder = 1 order by ViewOrder";
             SqlCommand cmd = CreateCommand(commandText, con);
             DataTable dt = Select(cmd);
-            List<SubCategory> subCategories = ConvertDataTable<SubCategory>(dt);
+            List<Category> categories = ConvertDataTable<Category>(dt);
 
-            return subCategories;
+            return categories;
         }
 
-        internal List<SubCategory> getAllSubCategoriesByTitle(string where)
+        internal List<Category> getSubCategoryInfo(string slug)
         {
             SqlConnection con = Connect();
-            string commandText = string.Format("select distinct Title from dbo.subCategory {0} order by Title", where);
+            string commandText = string.Format("select * from categoryInfo where Id = (select ParentId from categoryInfo where slug = N'{0}') union all select * from categoryInfo where slug = N'{0}'", slug);
             SqlCommand cmd = CreateCommand(commandText, con);
             DataTable dt = Select(cmd);
-            List<SubCategory> subCategories = ConvertDataTable<SubCategory>(dt);
+            List<Category> categories = ConvertDataTable<Category>(dt);
 
-            return subCategories;
+            return categories;
         }
 
         internal List<Route> getAllRoutes()

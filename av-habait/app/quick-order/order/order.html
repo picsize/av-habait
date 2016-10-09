@@ -1,0 +1,45 @@
+﻿<section class="order modal fade" id="order" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title">הזמנה <small>120 דקות ובעל המקצוע אצלך</small></h3>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <form>
+                        <div class="row">
+                            <div class="col-xs-12">
+
+                                <div class="row form-group">
+                                    <label>שם מלא</label>
+                                    <input type="text" class="form-control" ng-model="models.order.fullName">
+                                </div>
+
+                                <div class="row form-group">
+                                    <label>דואר אלקטרוני</label>
+                                    <input type="text" class="form-control" ng-model="models.order.email">
+                                </div>
+
+                                <div class="row form-group">
+                                    <label>טלפון</label>
+                                    <input type="text" class="form-control" ng-model="models.order.phone">
+                                </div>
+
+                                <div class="row form-group">
+                                    <label>כתובת</label>
+                                    <input type="text" class="form-control" ng-model="models.order.address">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="functions.sendOrder()">ביצוע הזמנה</button>
+            </div>
+        </div>
+
+    </div>
+</section>

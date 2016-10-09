@@ -43,9 +43,19 @@ avBait.config(function ($locationProvider, $stateProvider, $urlRouterProvider, $
             data: { pageTitle: 'הזמנה מהירה תוך 120 דקות' }
         })
         .state('website.quickOrder.getPrice', {
-            url: '/הזמנה-מהירה/:category/:subCategory',
+            url: '/הזמנה-מהירה/:categorySlug/:subCategorySlug',
             templateUrl: 'app/quick-order/get-price.html',
-            data: { pageTitle: 'קבל הצעת מחיר' }
+            data: { pageTitle: 'קבל הצעת מחיר' },
+            params: {
+                categoryName: {
+                    value: '',
+                    squash: false
+                },
+                subCategoryName: {
+                    value: '',
+                    squash: false
+                }
+            }
         })
         .state('website.rating', {
             abstract: true,
@@ -75,6 +85,11 @@ avBait.config(function ($locationProvider, $stateProvider, $urlRouterProvider, $
             templateUrl: 'app/vip/for-home.html',
             data: { pageTitle: 'בתים פרטיים' }
         })
+        .state('website.addMember', {
+            url: '/הוספת-בעל-מקצוע',
+            templateUrl: 'app/pages/add-member.html',
+            data: { pageTitle: 'הוספת בעל מקצוע' }
+        })
 
 
     $locationProvider.html5Mode({
@@ -82,6 +97,11 @@ avBait.config(function ($locationProvider, $stateProvider, $urlRouterProvider, $
         requireBase: true
     });
 
+});
+
+
+avBait.run(function ($rootScope) {
+    $rootScope.models = {};
 });
 
 //angular.element(document).ready(function () {
