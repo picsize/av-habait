@@ -1,5 +1,6 @@
 ﻿using av_habait.App_Code.BAL;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,17 +21,18 @@ namespace av_habait.api
     public class BusinessService : System.Web.Services.WebService
     {
         private readonly Service _api = new Service();
-
+        private readonly Business _business = new Business();
         [WebMethod]
         [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
         public string addMember(string member)
         {
             try
             {
-                Business business = JsonConvert.DeserializeObject<Business>(member);
-                int state = business.addBusiness(business);
+                JObject json = JObject.Parse(member);
+                Business business = new Business(json);
+                _business.addBusiness(business);
                 Dictionary<string, object> res = new Dictionary<string, object>();
-                res.Add("state", state);
+                res.Add("state", 1);
                 return _api.convertToJson(res);
 
             }

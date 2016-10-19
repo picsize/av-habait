@@ -7,7 +7,8 @@
         'ngAnimate',
         'ngTouch',
         'angular-loading-bar',
-        'angularLoad'
+        'angularLoad',
+        'naif.base64'
     ]);
 
 avBait.filter('to_trusted', ['$sce', function ($sce) {

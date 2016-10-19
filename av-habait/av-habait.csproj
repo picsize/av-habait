@@ -35,12 +35,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
+    <DebugType>full</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -1025,6 +1026,7 @@
     <Content Include="lib\angular-1.5.8\i18n\angular-locale_zu-za.js" />
     <Content Include="lib\angular-1.5.8\i18n\angular-locale_zu.js" />
     <Content Include="lib\angular-1.5.8\version.txt" />
+    <Content Include="lib\angular-base64-upload\angular-base64-upload.js" />
     <Content Include="lib\angular-css-master\angular-css.js" />
     <Content Include="lib\angular-css-master\angular-css.min.js" />
     <Content Include="lib\angular-loading-bar-master\loading-bar.css" />
@@ -1170,7 +1172,9 @@
   <ItemGroup>
     <Content Include="scripts\ai.0.22.19-build00125.js" />
     <Content Include="scripts\ai.0.22.19-build00125.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="api\BusinessService.asmx.cs">

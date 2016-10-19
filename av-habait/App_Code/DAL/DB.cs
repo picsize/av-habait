@@ -253,6 +253,18 @@ namespace av_habait.App_Code.DAL
             }
         }
 
+        internal void addBusiness(Business business)
+        {
+            SqlConnection con = Connect();
+            string commandText = string.Format(@"exec addMember N'{0}', N'{1}', N'{2}', N'{3}', N'{4}', N'{5}', N'{6}', N'{7}', N'{8}', N'{9}'",
+            business.Email, business.Password, business.FullName, business.MobileNumber, business.HomeNumber,
+            business.Address, business.Avatar, business.BusinessName, business.Hours, business.About);
+
+            SqlCommand cmd = CreateCommand(commandText, con);
+            ExecuteAndClose(cmd);
+        }
+
+
         internal Page getPageBySlug(string slug)
         {
             SqlConnection con = Connect();

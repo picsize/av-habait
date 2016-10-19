@@ -1,6 +1,55 @@
 ﻿
 <section class="container-fluid add-member">
-    sdsdsdsd
+    <div class="row">
+        <div class="col-xs-10 center-block">
+            <form id="add-memeber" ng-submit="functions.addMember()">
+                <div class="form-group">
+                    <label for="email">כתובת מייל</label>
+                    <input type="email" class="form-control" ng-model="models.business.Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">סיסמה</label>
+                    <input type="password" class="form-control" ng-model="models.business.Password" required>
+                </div>
+                <div class="form-group">
+                    <label for="fullName">שם בעל העסק</label>
+                    <input type="text" class="form-control" ng-model="models.business.FullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="mobile">נייד</label>
+                    <input type="tel" class="form-control" ng-model="models.business.MobileNumber">
+                </div>
+                <div class="form-group">
+                    <label for="home">טלפון במשרד</label>
+                    <input type="tel" class="form-control" ng-model="models.business.HomeNumber">
+                </div>
+                <div class="form-group">
+                    <label for="address">כתובת</label>
+                    <input type="text" class="form-control" ng-model="models.business.Address" required>
+                </div>
+                <div class="form-group">
+                    <label for="avatar">תמונה</label>
+                    <input type="file" class="form-control" ng-model="models.business.File" base-sixty-four-input accept="image/*">
+                    <img ng-src="data:image/jpeg;base64,{{models.business.File.base64}}" ng-hide="models.business.File.base64 === undefined" style="width:150px; height:150px;"/>
+                </div>
+                <div class="form-group">
+                    <label for="businessName">שם העסק</label>
+                    <input type="text" class="form-control" ng-model="models.business.BusinessName" required>
+                </div>
+                <div class="form-group">
+                    <label for="hours">שעות פעילות</label>
+                    <textarea class="form-control" ng-model="models.business.Hours"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="about">אודות</label>
+                    <textarea class="form-control" ng-model="models.business.About"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="הוספת בעל מקצוע" class="btn btn-primary"/>
+                </div>
+            </form>
+        </div>
+    </div>
 </section>
 
 
