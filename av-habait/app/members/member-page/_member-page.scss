@@ -23,11 +23,7 @@
 
             .info-block {
                 display: block;
-
-                &:not(.facebook) {
-                    font-size: 2rem;
-                }
-
+                font-size: 2rem;
 
                 label {
                     font-weight: bold;
@@ -46,11 +42,26 @@
                 display: block;
             }
         }
+
+        .facebook {
+            background: url(/content/images/facebook.png) no-repeat;
+            background-size: contain;
+            background-position-x: 100%;
+            padding: 2% 0;
+
+            a {
+                padding-right: 20%;
+                font-weight: 100;
+            }
+        }
     }
 
     .middle {
         img {
-            width: 50%;
+            width: 200px;
+            height: 200px;
+            border: 1px solid #337ab7;
+            padding: 1%;
             border-radius: 50%;
         }
 
@@ -94,6 +105,16 @@
         .member-position p {
             color: #fff;
             background-color: #7092b0;
+        }
+    }
+
+    .left-side {
+        border-right:2px solid #ebe9e9;
+        img{
+            width:40px;
+        }
+        span {
+            font-size: 3rem;
         }
     }
 }

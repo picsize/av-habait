@@ -74,5 +74,20 @@ namespace av_habait.App_Code.BAL
         {
             return _db.getSubCategoryInfo(slug);
         }
+
+        internal List<Category> getAllCategories()
+        {
+            return _db.getAllCategories();
+        }
+
+        internal Category getCategoryInfo(string slug)
+        {
+            return _db.getCategoryInfo(slug);
+        }
+
+        internal List<Category> search()
+        {
+            return _db.search();
+        }
     }
 }

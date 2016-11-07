@@ -10,8 +10,8 @@
             padding: 1rem;
             border-top-left-radius: 1.4rem;
             border-top-right-radius: 1.4rem;
-            color:#337ab7;
-            font-size:3rem;
+            color: #337ab7;
+            font-size: 3rem;
         }
     }
 
@@ -39,9 +39,10 @@
 
                 &.member-image {
                     img {
-                        width: 60%;
+                        width: 60px;
                         border: 1px solid #000;
                         border-radius: 50%;
+                        height: 60px;
                     }
 
                     span {
@@ -100,8 +101,9 @@
                         margin: 0 auto;
 
                         .progress {
-                            /*height: 10px;*/
+                            height: 10px;
                             margin-bottom: 0;
+                            margin-top: 1.2rem;
                         }
                     }
                 }

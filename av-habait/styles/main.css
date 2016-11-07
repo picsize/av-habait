@@ -58,6 +58,9 @@ html, body {
   width: 20%;
   float: right; }
 
+.clickable:hover {
+  cursor: pointer; }
+
 @media (min-width: 768px) {
   .col-sm-15 {
     width: 20%;
@@ -790,6 +793,18 @@ home-how-does-it-works .how {
       .for-home .service h3 + ul li {
         color: #337ab7; }
 
+.for-home .form-holder {
+  background-color: #ebe9e9;
+  padding: 1%;
+  border-radius: 2rem;
+  margin: 2% 0 5%; }
+  .for-home .form-holder .plan-form .form-group label {
+    display: block; }
+  .for-home .form-holder .plan-form .form-group:not(:first-child) {
+    margin-right: 3%; }
+  .for-home .form-holder .plan-form .form-group:last-of-type {
+    margin-top: 2rem; }
+
 .breadcrumbs ul {
   list-style: none;
   padding: 0; }
@@ -840,9 +855,10 @@ home-how-does-it-works .how {
       .members-list .member li > div:not(:last-child) {
         border-left: 1px solid #d0cfcf; }
       .members-list .member li > div.member-image img {
-        width: 60%;
+        width: 60px;
         border: 1px solid #000;
-        border-radius: 50%; }
+        border-radius: 50%;
+        height: 60px; }
       .members-list .member li > div.member-image span {
         /*margin-right: 1.5rem;*/ }
         .members-list .member li > div.member-image span:before {
@@ -879,8 +895,9 @@ home-how-does-it-works .how {
           top: 1rem;
           margin: 0 auto; }
           .members-list .member li > div.member-availability > div .progress {
-            /*height: 10px;*/
-            margin-bottom: 0; }
+            height: 10px;
+            margin-bottom: 0;
+            margin-top: 1.2rem; }
       .members-list .member li > div.member-reviews span {
         display: block; }
       .members-list .member li > div.member-price {
@@ -922,9 +939,8 @@ home-how-does-it-works .how {
   border-radius: 2rem;
   padding: 4% 0; }
   .member-page .right-side .info .info-block {
-    display: block; }
-    .member-page .right-side .info .info-block:not(.facebook) {
-      font-size: 2rem; }
+    display: block;
+    font-size: 2rem; }
     .member-page .right-side .info .info-block label {
       font-weight: bold; }
 
@@ -935,8 +951,20 @@ home-how-does-it-works .how {
   .member-page .right-side .specialist a {
     display: block; }
 
+.member-page .right-side .facebook {
+  background: url(/content/images/facebook.png) no-repeat;
+  background-size: contain;
+  background-position-x: 100%;
+  padding: 2% 0; }
+  .member-page .right-side .facebook a {
+    padding-right: 20%;
+    font-weight: 100; }
+
 .member-page .middle img {
-  width: 50%;
+  width: 200px;
+  height: 200px;
+  border: 1px solid #337ab7;
+  padding: 1%;
   border-radius: 50%; }
 
 .member-page .middle .member-rating-sum p {
@@ -966,6 +994,13 @@ home-how-does-it-works .how {
   color: #fff;
   background-color: #7092b0; }
 
+.member-page .left-side {
+  border-right: 2px solid #ebe9e9; }
+  .member-page .left-side img {
+    width: 40px; }
+  .member-page .left-side span {
+    font-size: 3rem; }
+
 /* Large desktops and laptops */
 /* Landscape tablets and medium desktops */
 /* Portrait tablets and small desktops */
@@ -979,6 +1014,16 @@ home-how-does-it-works .how {
     margin-bottom: 1rem; }
   .member-reviews .review .about .client-name {
     font-size: 1.8rem; }
+  .member-reviews .review .client-rating label {
+    font-weight: normal; }
+  .member-reviews .review .client-rating .member-info-sum li {
+    width: 20%;
+    border-right: none;
+    margin-bottom: 1rem; }
+    .member-reviews .review .client-rating .member-info-sum li:first-child {
+      border-left: 2px solid #a29c9c; }
+      .member-reviews .review .client-rating .member-info-sum li:first-child label, .member-reviews .review .client-rating .member-info-sum li:first-child span {
+        font-weight: bold; }
 
 /* Large desktops and laptops */
 /* Landscape tablets and medium desktops */
@@ -990,4 +1035,15 @@ home-how-does-it-works .how {
 /* Portrait tablets and small desktops */
 /* Landscape phones and portrait tablets */
 /* Portrait phones and smaller */
+#rating-small-order {
+  width: 12%;
+  position: fixed;
+  left: 47.5rem; }
+  #rating-small-order.absolute {
+    position: absolute;
+    width: 16%;
+    left: 0;
+    top: 110rem; }
+  #rating-small-order:hover {
+    cursor: pointer; }
 

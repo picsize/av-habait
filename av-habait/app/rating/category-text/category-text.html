@@ -2,13 +2,9 @@
 <section class="category-text container-fluid">
     <div class="row clearfix">
         <div class="col-xs-4 center-block text-center">
-            <h1>{{models.params.subCategory}}</h1>
-            <p style="text-align:justify;">
-                לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית.
-                לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית.
-                לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית.
-                לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית.
-            </p>
+            <h1 ng-if="models.params.subCategoryName !== ''">{{models.params.subCategoryName}}</h1>
+            <h1 ng-if="models.params.subCategoryName === ''">{{models.category.Name}}</h1>
+            <p style="text-align:justify;" ng-bind="models.category.Description"></p>
         </div>
     </div>
 </section>

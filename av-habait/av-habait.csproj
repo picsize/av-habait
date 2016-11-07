@@ -123,6 +123,7 @@
     <Content Include="app\big-banner\big-banner.js" />
     <Content Include="app\breadcrumbs\breadcrumbs.html" />
     <Content Include="app\breadcrumbs\breadcrumbs.js" />
+    <Content Include="app\directives\scroll.js" />
     <Content Include="app\directives\title.js" />
     <Content Include="app\factories\service.js" />
     <Content Include="app\home\company-services\company-services.html" />
@@ -172,6 +173,7 @@
     <Content Include="app\search\search.js" />
     <Content Include="app\side-bar\side-bar.html" />
     <Content Include="app\side-bar\side-bar.js" />
+    <Content Include="app\vip\ctrl.js" />
     <Content Include="app\vip\for-home.html" />
     <Content Include="app\vip\main.html" />
     <Content Include="app\website.html" />
@@ -207,6 +209,7 @@
     <Content Include="content\images\checkbenefit.png" />
     <Content Include="content\images\creditIcon.png" />
     <Content Include="content\images\departmentIcon.png" />
+    <Content Include="content\images\facebook.png" />
     <Content Include="content\images\fastOrderIcon.png" />
     <Content Include="content\images\goldpro.png" />
     <Content Include="content\images\gravestoneIcon.png" />
@@ -245,6 +248,7 @@
     <Content Include="content\images\reovationIcon.png" />
     <Content Include="content\images\search.png" />
     <Content Include="content\images\seperator.png" />
+    <Content Include="content\images\smallOrder.png" />
     <Content Include="content\images\solution.png" />
     <Content Include="content\images\strip.jpg" />
     <Content Include="content\images\talImg.png" />
@@ -1084,6 +1088,7 @@
     <Content Include="app\members\member-reviews\_member-reviews.scss" />
     <Content Include="app\quick-order\order\_order.scss" />
     <Content Include="app\members\add-member\_add-member.scss" />
+    <Content Include="app\rating\_rating-categories.scss" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>

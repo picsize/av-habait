@@ -1,16 +1,39 @@
 ﻿
 .member-reviews {
     .review {
-        margin-top:2rem;
-        border-radius:2rem;
-        padding-top:1%;
-        &:last-of-type{
-            margin-bottom:1rem;
+        margin-top: 2rem;
+        border-radius: 2rem;
+        padding-top: 1%;
+
+        &:last-of-type {
+            margin-bottom: 1rem;
         }
 
-        .about{
-            .client-name{
-                font-size:1.8rem;
+        .about {
+            .client-name {
+                font-size: 1.8rem;
+            }
+        }
+
+        .client-rating {
+            label {
+                font-weight: normal;
+            }
+
+            .member-info-sum {
+                li {
+                    width: 20%;
+                    border-right: none;
+                    margin-bottom:1rem;
+
+                    &:first-child {
+                        border-left: 2px solid #a29c9c;
+
+                        label, span {
+                            font-weight: bold;
+                        }
+                    }
+                }
             }
         }
     }

@@ -327,5 +327,85 @@ namespace av_habait.website.api
                 return _api.createExceptionJson(ex);
             }
         }
+
+        [WebMethod]
+        [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+        public string getAllCategories()
+        {
+            try
+            {
+                List<Category> categories = _category.getAllCategories();
+                List<Category> parents = categories.FindAll(s => s.ParentId == 0);
+                List<Category> all = new List<Category>();
+
+                foreach (Category category in parents)
+                {
+                    category.setSubCategories(categories.FindAll(s => s.ParentId == category.Id));
+                    all.Add(category);
+                }
+
+                Dictionary<string, object> res = new Dictionary<string, object>();
+                if (all != null)
+                {
+                    res.Add("state", 1);
+                    res.Add("categories", all);
+                }
+                else
+                    res.Add("state", 0);
+                return _api.convertToJson(res);
+            }
+            catch (Exception ex)
+            {
+                return _api.createExceptionJson(ex);
+            }
+        }
+
+        [WebMethod]
+        [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+        public string getCategoryInfo(string slug)
+        {
+            try
+            {
+                Category thisCategory = _category.getCategoryInfo(slug);
+
+                Dictionary<string, object> res = new Dictionary<string, object>();
+                if (thisCategory != null)
+                {
+                    res.Add("state", 1);
+                    res.Add("category", thisCategory);
+                }
+                else
+                    res.Add("state", 0);
+                return _api.convertToJson(res);
+            }
+            catch (Exception ex)
+            {
+                return _api.createExceptionJson(ex);
+            }
+        }
+
+        [WebMethod]
+        [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+        public string search()
+        {
+            try
+            {
+                List<Category> categories = _category.search();
+
+                Dictionary<string, object> res = new Dictionary<string, object>();
+                if (categories != null)
+                {
+                    res.Add("state", 1);
+                    res.Add("categories", categories);
+                }
+                else
+                    res.Add("state", 0);
+                return _api.convertToJson(res);
+            }
+            catch (Exception ex)
+            {
+                return _api.createExceptionJson(ex);
+            }
+        }
     }
 }

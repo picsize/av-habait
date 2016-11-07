@@ -3,9 +3,10 @@
     <nav>
         <div class="container-fluid">
             <ul>
-                <li><a ui-sref="website.rating.main">אב הבית דירוגים</a></li>
-                <li><a ui-sref="website.rating.main">אינסטלציה</a></li>
-                <li><a ui-sref="website.rating.main">פתיחת סתימה</a></li>
+                <li ng-repeat="crumb in models.crumbs track by $index">
+                    <a ui-sref="{{crumb.state}}" ng-if="crumb.state !== ''">{{crumb.name}}</a>
+                    <a ng-if="crumb.state === ''">{{crumb.name}}</a>
+                </li>
             </ul>
         </div>
     </nav>

@@ -73,6 +73,10 @@
     float: right;
 }
 
+.clickable:hover{
+    cursor:pointer;
+}
+
 @media (min-width: 768px) {
     .col-sm-15 {
         width: 20%;

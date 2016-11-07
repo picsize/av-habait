@@ -8,15 +8,6 @@ avBait.component('quickOrderCategories', {
         }
 
         $scope.functions = {
-            service: function (handler, data) {
-                return $http({
-                    url: $scope.models.baseUrl + handler,
-                    method: 'POST',
-                    data: (data !== undefined) ? JSON.stringify(data) : '',
-                    contentType: 'application/json'
-                });
-            },
-
             init: function () {
                 Service.post($scope.models.baseUrl,'getQuickOrdersCategories').then(function (response) {
                     if (JSON.parse(response.data.d).state === 1) {

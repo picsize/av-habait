@@ -5,6 +5,7 @@
         'angularCSS',
         'ngCookies',
         'ngAnimate',
+        'ngSanitize',
         'ngTouch',
         'angular-loading-bar',
         'angularLoad',
@@ -68,14 +69,25 @@ avBait.config(function ($locationProvider, $stateProvider, $urlRouterProvider, $
             data: { pageTitle: 'צפייה בדירוגים של בעלי המקצוע' }
         })
         .state('website.rating.member', {
-            url: '/דירוגים/:category/:subCategory',
+            url: '/דירוגים/:categorySlug/:subCategorySlug',
             templateUrl: 'app/rating/members.html',
-            data: { pageTitle: 'צפייה בדירוגים של בעלי המקצוע' }
+            data: { pageTitle: 'צפייה בדירוגים של בעלי המקצוע' },
+            params: {
+                categoryName: {
+                    value: '',
+                    squash: false
+                },
+                subCategoryName: {
+                    value: '',
+                    squash: false
+                }
+            }
         })
         .state('website.member', {
-            url: '/בעלי מקצוע/:member',
+            url: '/בעלי-מקצוע/:member',
             templateUrl: 'app/members/member.html',
-            data: { pageTitle: 'פרטי בעל המקצוע' }
+            data: { pageTitle: 'פרטי בעל המקצוע' },
+
         })
         .state('website.vip', {
             abstract: true,
@@ -84,6 +96,7 @@ avBait.config(function ($locationProvider, $stateProvider, $urlRouterProvider, $
         .state('website.vip.forHome', {
             url: '/אב-הבית-פרטי',
             templateUrl: 'app/vip/for-home.html',
+            controller: 'vip',
             data: { pageTitle: 'בתים פרטיים' }
         })
         .state('website.addMember', {
@@ -101,9 +114,14 @@ avBait.config(function ($locationProvider, $stateProvider, $urlRouterProvider, $
 });
 
 
-avBait.run(function ($rootScope) {
+avBait.run(function ($rootScope, $templateCache) {
     $rootScope.models = {};
+    $rootScope.$on('$viewContentLoaded', function () {
+        $templateCache.removeAll();
+    });
 });
+
+
 
 //angular.element(document).ready(function () {
 //    angular.bootstrap(document, ['avBait']);

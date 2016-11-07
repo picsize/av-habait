@@ -1,0 +1,17 @@
+﻿
+#rating-small-order {
+    width: 12%;
+    position: fixed;
+    left: 47.5rem;
+
+    &.absolute {
+        position: absolute;
+        width: 16%;
+        left: 0;
+        top: 110rem;
+    }
+
+    &:hover{
+        cursor:pointer;
+    }
+}

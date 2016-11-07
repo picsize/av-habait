@@ -12,7 +12,7 @@
                     <h3 class="font-bold">{{category.Name}}</h3>
                     <ul>
                         <li ng-repeat="subCategory in category.SubCategories track by $index" ng-if="$index<5">
-                            <a href="#">{{subCategory.Name}}</a>
+                            <a ui-sref="website.rating.member({categorySlug:'{{category.Slug}}', subCategorySlug:'{{subCategory.Slug}}', categoryName:'{{category.Name}}', subCategoryName:'{{subCategory.Name}}'})">{{subCategory.Name}}</a>
                         </li>
                     </ul>
                 </div>

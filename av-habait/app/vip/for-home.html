@@ -15,43 +15,33 @@
     </div>
     <div class="row clearfix">
         <div class="col-xl-4 ">
-            <div class="col-xs-10 center-block regular">
+            <div class="col-xs-10 center-block regular clickable" ng-click="functions.setView('regular')">
                 <p>מגוון שירותים בטלפון אחד. חייג ואנו נדאג לכל השאר</p>
             </div>
 
         </div>
         <div class="col-xl-4 ">
-            <div class="col-xs-10 center-block gold">
-                <ul>
-                    <li>טקסט טקסט</li>
-                    <li>טקסט טקסט</li>
-                    <li>טקסט טקסט</li>
-                    <li>טקסט טקסט</li>
-                    <li>טקסט טקסט</li>
-                    <li>טקסט טקסט</li>
-                    <li>טקסט טקסט</li>
-                    <li>טקסט טקסט</li>
-                </ul>
+            <div class="col-xs-10 center-block gold clickable" ng-click="functions.setView('gold')">
+                <p>
+                    השירות ניתן בין השעות 8:00-17:00
+                    הודעות ובקשות יימסרו יום קודם עד השעה 17:00
+                    שירות בית מרקחת מוגבל לתרופות מרשם בלבד.
+
+                </p>
             </div>
 
         </div>
         <div class="col-xl-4 ">
-            <div class="col-xs-10 center-block vip">
-                <ul>
-                    <li>טקסט טקסט</li>
-                    <li>טקסט טקסט</li>
-                    <li>טקסט טקסט</li>
-                    <li>טקסט טקסט</li>
-                    <li>טקסט טקסט</li>
-                    <li>טקסט טקסט</li>
-                    <li>טקסט טקסט</li>
-                    <li>טקסט טקסט</li>
-                </ul>
+            <div class="col-xs-10 center-block vip clickable" ng-click="functions.setView('vip')">
+                <p>
+                    תוכנית מותאמת אישית לרצונות ולצרכים שלך!
+                </p>
             </div>
 
         </div>
     </div>
-    <div class="row clearfix">
+
+    <div class="row clearfix" ng-if="models.view === 'regular'">
         <div class="col-xs-15 text-center service">
             <img src="/content/images/private-home/car.png" alt="רכב" />
             <h3 class="font-bold">שירות לרכב ולנהג פרטי</h3>
@@ -76,20 +66,6 @@
             </ul>
         </div>
         <div class="col-xs-15 text-center service">
-            <img src="/content/images/private-home/joy.png" alt="הנאות" />
-            <h3 class="font-bold">הנאות</h3>
-            <ul>
-                <li>טקסט טקסט</li>
-                <li>טקסט טקסט</li>
-                <li>טקסט טקסט</li>
-                <li>טקסט טקסט</li>
-                <li>טקסט טקסט</li>
-                <li>טקסט טקסט</li>
-                <li>טקסט טקסט</li>
-                <li>טקסט טקסט</li>
-            </ul>
-        </div>
-        <div class="col-xs-15 text-center service">
             <img src="/content/images/private-home/animals.png" alt="חיות" />
             <h3 class="font-bold">חיות</h3>
             <ul>
@@ -99,19 +75,179 @@
                 <li><strong>חייג למספר טלפון אחד ואנו נדאג לכל השאר. </strong> </li>
             </ul>
         </div>
+    </div>
+
+    <div class="row clearfix" ng-if="models.view === 'gold'">
+        <div class="col-xs-15 text-center service">
+            <img src="/content/images/private-home/car.png" alt="רכב" />
+            <h3 class="font-bold">שירות לרכב ולנהג פרטי</h3>
+            <ul>
+                <li>לקיחת רכב למוסך למעבר טסט.</li>
+                <li>עד שני רכבים חינם, ללא תשלום במשך כל השנה</li>
+                <li>(לא כולל רחיצה, נהג פרטי והסעה לחוגים)</li>
+            </ul>
+        </div>
+        <div class="col-xs-15 text-center service">
+            <img src="/content/images/private-home/fix.png" alt="תיקנים לבית" />
+            <h3 class="font-bold">תיקונים לבית</h3>
+            <ul>
+                <li>הנחה בסך 7% בהזמנת בעלי מקצוע.</li>
+                <li>הנחה בסך 10% על החלקים.</li>
+                <li>ניקוי מרזבים, מזגנים ודודי שמש- חינם!</li>
+                <li>תיקון מכונת כביסה, מקרר, תנור ומייבש- חינם! </li>
+                <li>(לא כולל חלקים)</li>
+            </ul>
+        </div>
+        <div class="col-xs-15 text-center service">
+            <img src="/content/images/private-home/joy.png" alt="הנאות" />
+            <h3 class="font-bold">הנאות</h3>
+            <ul>
+                <li>רוצים לצאת למסעדה, לבית מלון או להצגה?</li>
+                <li>אנחנו נדאג לבצע את ההזמנה עבורכם- חינם!</li>
+            </ul>
+        </div>
+        <div class="col-xs-15 text-center service">
+            <img src="/content/images/private-home/animals.png" alt="חיות" />
+            <h3 class="font-bold">חיות</h3>
+            <ul>
+                <li>הכלב צריך וטרינר?</li>
+                <li>אין מי שייקח את הכלב לרחיצה או תספורת?</li>
+                <li>צריך אספקה של מזון? </li>
+                <li>אנו נעשה זאת עבורך חינם למשך שנה!</li>
+                <li>(לא כולל לקיחת בעל החיים לטיול)</li>
+            </ul>
+        </div>
         <div class="col-xs-15 text-center service">
             <img src="/content/images/private-home/delivery.png" alt="שליחויות" />
             <h3 class="font-bold">שליחויות</h3>
             <ul>
-                <li>טקסט טקסט</li>
-                <li>טקסט טקסט</li>
-                <li>טקסט טקסט</li>
-                <li>טקסט טקסט</li>
-                <li>טקסט טקסט</li>
-                <li>טקסט טקסט</li>
-                <li>טקסט טקסט</li>
-                <li>טקסט טקסט</li>
+                <li>חייבים להגיע לבנק ואינכם מספיקים?</li>
+                <li>מחכה לכם חבילה בדואר ואתם עסוקים?</li>
+                <li>צריכים להביא תרופה מבית המרקחת?</li>
+                <li>הדאגות הסתיימו!</li>
+                <li>מהיום אנחנו נעשה עבורכם את כל הסידורים,</li>
+                <li>עד 10 שליחויות בחודש- חינם!</li>
             </ul>
         </div>
     </div>
+
+    <div class="row clearfix" ng-if="models.view === 'vip'">
+        <div class="col-xs-15 text-center service">
+            <img src="/content/images/private-home/car.png" alt="רכב" />
+            <h3 class="font-bold">שירות לרכב ולנהג פרטי</h3>
+            <ul>
+                <li>לקיחת רכב למוסך למעבר טסט</li>
+                <li>עד שני רכבים- חינם במשך כל השנה</li>
+                <li>השירות כולל רחיצה, נהג פרטי והסעה לחוגים</li>
+
+            </ul>
+        </div>
+        <div class="col-xs-15 text-center service">
+            <img src="/content/images/private-home/fix.png" alt="תיקנים לבית" />
+            <h3 class="font-bold">תיקונים לבית</h3>
+            <ul>
+                <li>כל שירות התיקונים בבית ללא השתתפות עצמית</li>
+            </ul>
+        </div>
+        <div class="col-xs-15 text-center service">
+            <img src="/content/images/private-home/joy.png" alt="הנאות" />
+            <h3 class="font-bold">הנאות</h3>
+            <ul>
+                <li>רוצים לצאת למסעדה, לבית מלון או להצגה?</li>
+                <li>אנחנו נדאג לבצע את ההזמנה עבורכם- חינם!</li>
+            </ul>
+        </div>
+        <div class="col-xs-15 text-center service">
+            <img src="/content/images/private-home/animals.png" alt="חיות" />
+            <h3 class="font-bold">חיות</h3>
+            <ul>
+                <li>הכלב צריך וטרינר?</li>
+                <li>אין מי שייקח את הכלב לרחיצה או תספורת?</li>
+                <li>צריך אספקה של מזון או שניקח את הכלב לטיול?</li>
+                <li>השירות כולו ניתן חינם למשך שנה.</li>
+            </ul>
+        </div>
+        <div class="col-xs-15 text-center service">
+            <img src="/content/images/private-home/delivery.png" alt="שליחויות" />
+            <h3 class="font-bold">שליחויות</h3>
+            <ul>
+                <li>לא מספיקים להגיע לבנק?</li>
+                <li>מחכה לכם חבילה בדואר ואתם עסוקים?</li>
+                <li>צריכים לקנות תרופה מבית המרקחת?</li>
+                <li>מהיום הסתיימו הריצות והדאגות. </li>
+                <li><strong>'אב הבית' תעשה עבורכם את כל הסידורים!</strong></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row clearfix" ng-if="models.view === 'regular'">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="container">
+                    <div class="col-xs-3">
+                        <h3>מחירונים</h3>
+                        <p>
+                            <strong>שירותי רכב - </strong>
+                            249 ₪ לשעתיים או לחלק מהם. כל שעה נוספת בעלות 89 ₪ בלבד.
+                            השירות ניתן על ידי נהגים מנוסים בלבד.
+                        </p>
+                        <p>
+                            <strong>שירותי טיפול בבעלי חיים - </strong>
+                            129 ₪ לשעה או לחלק ממנה.
+                        </p>
+                        <p>
+                            <strong>שירות תיקונים לבית - </strong>
+                            הנחה של 10% על החלקים ו- 5% על העבודה.
+                            'אב הבית' נותן פיקוח ואחריות מלאים.
+
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row clearfix">
+        <div class="container">
+            <div class="form-holder col-xs-8">
+                <form class="plan-form form-inline">
+                    <div class="form-group">
+                        <label>שם מלא</label>
+                        <input type="text" class="form-control" ng-model="models.form.fullName">
+                    </div>
+
+                    <div class="form-group">
+                        <label>דואר אלקטרוני</label>
+                        <input type="text" class="form-control" ng-model="models.form.email">
+                    </div>
+
+                    <div class="form-group">
+                        <label>טלפון להתקשרות</label>
+                        <input type="text" class="form-control" ng-model="models.form.phoneNumber">
+                    </div>
+
+                    <div class="form-group">
+                        <label>כתובת</label>
+                        <input type="text" class="form-control" ng-model="models.form.address">
+                    </div>
+
+                    <div class="form-group">
+                        <label>זמן מועדף לחזרה</label>
+                        <input type="time" class="form-control" ng-model="models.form.time">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary" value="שלח" />
+                    </div>
+
+                   
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+
 </section>

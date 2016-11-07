@@ -286,5 +286,49 @@ namespace av_habait.App_Code.DAL
 
             return businessList;
         }
+
+        internal Business getMemberBySlug(string slug)
+        {
+            SqlConnection con = Connect();
+            string commandText = string.Format("select * from businessView where Slug = N'{0}'", slug);
+            SqlCommand cmd = CreateCommand(commandText, con);
+            DataTable dt = Select(cmd);
+            List<Business> businessList = ConvertDataTable<Business>(dt);
+
+            return businessList[0];
+        }
+
+        internal List<Business> getMembers(string slug)
+        {
+            SqlConnection con = Connect();
+            string commandText = string.Format("select * from businessView where BusinessId in (select BusinessId from BusinessCategories where CategoryId in (select Id from categoryInfo where slug = N'{0}' ))", slug);
+            SqlCommand cmd = CreateCommand(commandText, con);
+            DataTable dt = Select(cmd);
+            List<Business> businessList = ConvertDataTable<Business>(dt);
+
+            return businessList;
+        }
+
+        internal Category getCategoryInfo(string slug)
+        {
+            SqlConnection con = Connect();
+            string commandText = string.Format("select * from Category where Slug = N'{0}'", slug);
+            SqlCommand cmd = CreateCommand(commandText, con);
+            DataTable dt = Select(cmd);
+            List<Category> categoriesList = ConvertDataTable<Category>(dt);
+
+            return categoriesList[0];
+        }
+
+        internal List<Category> search()
+        {
+            SqlConnection con = Connect();
+            string commandText = string.Format("select * from categoryInfo");
+            SqlCommand cmd = CreateCommand(commandText, con);
+            DataTable dt = Select(cmd);
+            List<Category> categoriesList = ConvertDataTable<Category>(dt);
+
+            return categoriesList;
+        }
     }
 }
