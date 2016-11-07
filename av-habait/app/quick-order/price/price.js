@@ -6,7 +6,8 @@ avBait.component('price', {
         $scope.stateParams = $stateParams;
         $scope.models = {
             baseUrl: '/api/CategoryService.asmx/',
-            category: []
+            category: [],
+            area:''
         }
 
         $scope.functions = {

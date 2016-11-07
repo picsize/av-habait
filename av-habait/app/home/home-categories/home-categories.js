@@ -12,7 +12,6 @@ avBait.component('homeCategories', {
                 Service.post($scope.models.baseUrl,'getCategories').then(function (response) {  
                     if (JSON.parse(response.data.d).state === 1) {
                         $scope.models.categories = JSON.parse(response.data.d).categories;
-                        //console.log($scope.models.categories);
                     }
                 },function (error) {  });
             },

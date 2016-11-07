@@ -27,18 +27,20 @@ home-categories {
             list-style: none;
             padding: 0;
             margin: 3rem 1rem;
+            overflow: hidden;
+            height: 40px;
 
             li {
                 display: inline-block;
 
-                &:not(.hidden-subcategory):not(:last-of-type)
-                {
-                    a{
-                        margin-right:0.7rem;
-                        &:after{
+                &:not(.hidden-subcategory):not(:last-of-type) {
+                    a {
+                        margin-right: 0.7rem;
+
+                        &:after {
                             content: ',';
                         }
-                    } 
+                    }
                 }
             }
         }
