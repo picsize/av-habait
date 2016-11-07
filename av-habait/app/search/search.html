@@ -1,7 +1,12 @@
 ﻿
 <div class="search">
     <form>
-        <input type="search" placeholder="בחר בעל מקצוע או שירות" class="text-center font-light" />
+        <input type="search" placeholder="בחר בעל מקצוע או שירות" class="text-center font-light" ng-keyup="functions.doSearch($event)" ng-model="models.searchString" />
+        <ul ng-if="models.searchString !== ''" class="search-results">
+            <li ng-repeat="category in models.categories track by $index" ng-if="category.Name.startsWith(models.searchString)">
+                <a ui-sref="website.rating.memberByCategory({categorySlug:'{{category.Slug}}',categoryName:'{{category.Name}}'})">{{category.Name}}</a>
+            </li>
+        </ul>
     </form>
 </div>
 

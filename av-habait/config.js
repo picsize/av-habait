@@ -83,6 +83,17 @@ avBait.config(function ($locationProvider, $stateProvider, $urlRouterProvider, $
                 }
             }
         })
+        .state('website.rating.memberByCategory', {
+            url: '/דירוגים/:categorySlug/',
+            templateUrl: 'app/rating/members.html',
+            data: { pageTitle: 'צפייה בדירוגים של בעלי המקצוע' },
+            params: {
+                categoryName: {
+                    value: '',
+                    squash: false
+                }
+            }
+        })
         .state('website.member', {
             url: '/בעלי-מקצוע/:member',
             templateUrl: 'app/members/member.html',

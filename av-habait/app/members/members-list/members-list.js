@@ -10,14 +10,26 @@ avBait.component('membersList', {
 
         $scope.functions = {
             init: function () {
-                Service.post($scope.models.baseUrl, 'getMembers', { slug: $scope.models.params.subCategorySlug }).then(function (response) {
-                    console.log('response', response)
-                    if (JSON.parse(response.data.d).state === 1) {
-                        $scope.models.businessList = JSON.parse(response.data.d).businessList;
-                    }
-                }, function (error) {
-                    console.log(error);
-                });
+                if ($scope.models.params.subCategorySlug === '') {
+                    Service.post($scope.models.baseUrl, 'getMembers', { slug: $scope.models.params.categorySlug }).then(function (response) {
+                        console.log('response', response)
+                        if (JSON.parse(response.data.d).state === 1) {
+                            $scope.models.businessList = JSON.parse(response.data.d).businessList;
+                        }
+                    }, function (error) {
+                        console.log(error);
+                    });
+                } else {
+                    Service.post($scope.models.baseUrl, 'getMembers', { slug: $scope.models.params.subCategorySlug }).then(function (response) {
+                        console.log('response', response)
+                        if (JSON.parse(response.data.d).state === 1) {
+                            $scope.models.businessList = JSON.parse(response.data.d).businessList;
+                        }
+                    }, function (error) {
+                        console.log(error);
+                    });
+                }
+                
             }
         }
 

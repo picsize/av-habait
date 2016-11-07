@@ -29,11 +29,33 @@ form {
             color: rgb(41, 77, 82);
         }
     }
+
+    .search-results {
+        list-style: none !important;
+        background: rgba(255,255,255,.3);
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+
+        li {
+            display: block !important;
+            font-size: 2rem !important;
+            margin-bottom: 1rem;
+
+            &:not(:last-child):after {
+                content: '';
+                display: none !important;
+            }
+
+            a {
+                color: #337ab7;
+                text-decoration: none;
+            }
+        }
+    }
 }
 
 /* Large desktops and laptops */
 @media (min-width: 1200px) and (max-width: 1900px) {
-
 }
 
 /* Landscape tablets and medium desktops */

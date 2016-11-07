@@ -255,6 +255,21 @@ form {
       color: #294d52; }
     form input:-ms-input-placeholder {
       color: #294d52; }
+  form .search-results {
+    list-style: none !important;
+    background: rgba(255, 255, 255, 0.3);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem; }
+    form .search-results li {
+      display: block !important;
+      font-size: 2rem !important;
+      margin-bottom: 1rem; }
+      form .search-results li:not(:last-child):after {
+        content: '';
+        display: none !important; }
+      form .search-results li a {
+        color: #337ab7;
+        text-decoration: none; }
 
 /* Large desktops and laptops */
 /* Landscape tablets and medium desktops */
