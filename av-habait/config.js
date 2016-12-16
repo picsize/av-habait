@@ -115,6 +115,36 @@ avBait.config(function ($locationProvider, $stateProvider, $urlRouterProvider, $
             templateUrl: 'app/pages/add-member.html',
             data: { pageTitle: 'הוספת בעל מקצוע' }
         })
+        .state('website.about', {
+            url: '/מי-אנחנו',
+            templateUrl: 'app/pages/about.html',
+            data: { pageTitle: 'מי אנחנו' }
+        })
+        .state('website.contact', {
+            url: '/צור-קשר',
+            templateUrl: 'app/pages/contact.html',
+            data: { pageTitle: 'צור קשר' }
+        })
+        .state('website.memberJoin', {
+            url: '/בעל-מקצוע-הצטרף',
+            templateUrl: 'app/pages/member-join.html',
+            data: { pageTitle: 'בעל מקצוע הצטרף' }
+        })
+        .state('website.forAppartmentRent', {
+            url: '/אב-הבית-למשכירי-דירות',
+            templateUrl: 'app/pages/appartment-rent.html',
+            data: { pageTitle: 'אב הבית למשכירי דירות' }
+        })
+        .state('website.forBusinessAndOffice', {
+            url: '/אב-הבית-למשרדים-ועסקים',
+            templateUrl: 'app/pages/business-and-office.html',
+            data: { pageTitle: 'אב הבית למשרדים ועסקים' }
+        })
+        .state('website.forRenovation', {
+            url: '/אב-הבית-שיפוצים',
+            templateUrl: 'app/pages/renovation.html',
+            data: { pageTitle: 'אב הבית שיפוצים' }
+        })
 
 
     $locationProvider.html5Mode({
@@ -125,11 +155,24 @@ avBait.config(function ($locationProvider, $stateProvider, $urlRouterProvider, $
 });
 
 
-avBait.run(function ($rootScope, $templateCache) {
+avBait.run(function ($rootScope, $templateCache, $location, $anchorScroll, $urlRouter) {
     $rootScope.models = {};
     $rootScope.$on('$viewContentLoaded', function () {
         $templateCache.removeAll();
     });
+
+    //when the route is changed scroll to the proper element.
+    $rootScope.$on('$locationChangeSuccess', function () {
+        if (localStorage.getItem('hash')) {
+            setTimeout(function() {
+                $location.hash(localStorage.getItem('hash'));
+                $anchorScroll();
+                localStorage.removeItem('hash');
+            },500)
+        }
+        
+    });
+
 });
 
 

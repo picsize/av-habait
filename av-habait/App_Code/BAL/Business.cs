@@ -24,6 +24,7 @@ namespace av_habait.App_Code.BAL
         public string Saturday { get; private set; }
         public string About { get; private set; }
         public string Slug { get; private set; }
+        public string Areas { get; private set; }
         #endregion
 
         public Business()
@@ -45,6 +46,7 @@ namespace av_habait.App_Code.BAL
             Address = (string)json["Address"];
             Avatar = (string)json["Avatar"];
             Hours = (string)json["Hours"];
+            Areas = (string)json["Areas"];
         }
 
         internal int addBusiness(string email, string password, int userType, string fullName, string mobileNumber,

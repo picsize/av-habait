@@ -2,7 +2,8 @@
 .big-banner {
     height: 81rem;
     background: url(/content/images/talImg.png) no-repeat;
-    background-size: 100%;
+    background-size: 110% 100%;
+    background-attachment: fixed;
 
     h1 {
         font-size: 7rem;

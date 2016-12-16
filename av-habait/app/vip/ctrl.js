@@ -1,7 +1,7 @@
 ﻿avBait.controller('vip', ['$scope', function ($scope) {
 
     $scope.models = {
-        view: 'regular',
+        view: 'all',
         form: {
             fullName: '',
             phoneNumber: '',

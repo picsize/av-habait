@@ -1,7 +1,7 @@
 ﻿
 avBait.component('websiteMenu', {
     templateUrl: 'app/menu/menu.html',
-    controller: function ($rootScope, $scope) {
+    controller: function ($rootScope, $scope, $location, $anchorScroll, $state) {
 
         var menu = $scope;
 
@@ -43,6 +43,17 @@ avBait.component('websiteMenu', {
         $scope.logout = function () {
             Cookie.remove('user');
             location.reload();
+        }
+
+        $scope.navigateToSection = function (part) {
+            if ($state.current.name != 'website.home') {
+                localStorage.setItem('hash', part);
+                $state.go("website.home", {});
+            } else {
+                $location.hash(part);
+                $anchorScroll();
+            }
+            
         }
 
         $scope.init();

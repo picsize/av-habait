@@ -43,12 +43,12 @@
     font-size: 9rem;
 }
 
-.bigger-font{
-    font-size:12rem;
+.bigger-font {
+    font-size: 12rem;
 }
 
-.gray-bg{
-    background-color:#ebe9e9;
+.gray-bg {
+    background-color: #ebe9e9;
 }
 
 #sidebar {
@@ -73,8 +73,45 @@
     float: right;
 }
 
-.clickable:hover{
-    cursor:pointer;
+.clickable:hover {
+    cursor: pointer;
+}
+
+.jumbotron {
+    background-color: transparent;
+}
+
+.page-article {
+    p {
+        font-size: 1.7rem;
+        line-height: 40px;
+    }
+}
+
+.page-img {
+    width: 100%;
+}
+
+.vvv {
+/* IE10+ */ 
+background-image: -ms-linear-gradient(right, rgba(255,255,255,1) 50%, rgba(237,237,237,1) 100%);
+
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(right, rgba(255,255,255,1) 50%, rgba(237,237,237,1) 100%);
+
+/* Opera */ 
+background-image: -o-linear-gradient(right, rgba(255,255,255,1) 50%, rgba(237,237,237,1) 100%);
+
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, right top, left top, color-stop(50, rgba(255,255,255,1)), color-stop(100, rgba(237,237,237,1)));
+
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(right, rgba(255,255,255,1) 50%, rgba(237,237,237,1) 100%);
+
+/* W3C Markup */ 
+background-image: linear-gradient(to left, rgba(255,255,255,1) 50%, rgba(237,237,237,1) 100%);
+
+
 }
 
 @media (min-width: 768px) {

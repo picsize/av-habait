@@ -1,0 +1,33 @@
+﻿
+.banner-page {
+    background: url(/content/images/aboutUs.png) no-repeat;
+    background-size: 100% 100%;
+    padding: 1% 0;
+    height: 30rem;
+
+    h1 {
+        margin-top: 8rem;
+        font-size:6rem;
+    }
+}
+
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) and (max-width: 1900px) {
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+}

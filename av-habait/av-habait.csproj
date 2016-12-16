@@ -113,10 +113,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="api\BusinessService.asmx" />
+    <Content Include="api\Categories.aspx" />
     <Content Include="api\CategoryService.asmx" />
     <Content Include="api\OrderService.asmx" />
     <Content Include="app\banner-quick\banner-quick.html" />
     <Content Include="app\banner-quick\banner-quick.js" />
+    <Content Include="app\banner-page\banner-page.html" />
+    <Content Include="app\banner-page\banner-page.js" />
     <Content Include="app\banner-rating\banner-rating.html" />
     <Content Include="app\banner-rating\banner-rating.js" />
     <Content Include="app\big-banner\big-banner.html" />
@@ -148,7 +151,13 @@
     <Content Include="app\members\member.html" />
     <Content Include="app\menu\menu.html" />
     <Content Include="app\menu\menu.js" />
+    <Content Include="app\pages\renovation.html" />
+    <Content Include="app\pages\business-and-office.html" />
+    <Content Include="app\pages\appartment-rent.html" />
+    <Content Include="app\pages\member-join.html" />
+    <Content Include="app\pages\contact.html" />
     <Content Include="app\pages\add-member.html" />
+    <Content Include="app\pages\about.html" />
     <Content Include="app\quick-order\order\order.html" />
     <Content Include="app\quick-order\order\order.js" />
     <Content Include="app\quick-order\price\price.html" />
@@ -179,12 +188,15 @@
     <Content Include="app\website.html" />
     <Content Include="config.js" />
     <Content Include="content\images\120.png" />
+    <Content Include="content\images\aboutUs.png" />
     <Content Include="content\images\app.png" />
+    <Content Include="content\images\appartmentRent.png" />
     <Content Include="content\images\arrow.png" />
     <Content Include="content\images\arrowUp.png" />
     <Content Include="content\images\benefits.png" />
     <Content Include="content\images\bgDottes.png" />
     <Content Include="content\images\bgWhy.png" />
+    <Content Include="content\images\businessAndoffice.png" />
     <Content Include="content\images\cat\air.png" />
     <Content Include="content\images\cat\aluminum.png" />
     <Content Include="content\images\cat\ants.png" />
@@ -245,6 +257,7 @@
     <Content Include="content\images\ratingIcon.png" />
     <Content Include="content\images\register.png" />
     <Content Include="content\images\regularpro.png" />
+    <Content Include="content\images\renovationBanner.png" />
     <Content Include="content\images\reovationIcon.png" />
     <Content Include="content\images\search.png" />
     <Content Include="content\images\seperator.png" />
@@ -1089,6 +1102,7 @@
     <Content Include="app\quick-order\order\_order.scss" />
     <Content Include="app\members\add-member\_add-member.scss" />
     <Content Include="app\rating\_rating-categories.scss" />
+    <Content Include="app\banner-page\_banner-page.scss" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
@@ -1185,6 +1199,13 @@
     <Compile Include="api\BusinessService.asmx.cs">
       <DependentUpon>BusinessService.asmx</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="api\Categories.aspx.cs">
+      <DependentUpon>Categories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="api\Categories.aspx.designer.cs">
+      <DependentUpon>Categories.aspx</DependentUpon>
     </Compile>
     <Compile Include="api\CategoryService.asmx.cs">
       <DependentUpon>CategoryService.asmx</DependentUpon>

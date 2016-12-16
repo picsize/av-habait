@@ -14,13 +14,13 @@
         </div>
     </div>
     <div class="row clearfix">
-        <div class="col-xl-4 ">
+        <div class="col-xl-4" ng-class="{'grayscale': models.view != 'all' && models.view != 'regular'}">
             <div class="col-xs-10 center-block regular clickable" ng-click="functions.setView('regular')">
                 <p>מגוון שירותים בטלפון אחד. חייג ואנו נדאג לכל השאר</p>
             </div>
 
         </div>
-        <div class="col-xl-4 ">
+        <div class="col-xl-4" ng-class="{'grayscale': models.view != 'all' && models.view != 'gold'}">
             <div class="col-xs-10 center-block gold clickable" ng-click="functions.setView('gold')">
                 <p>
                     השירות ניתן בין השעות 8:00-17:00
@@ -31,7 +31,7 @@
             </div>
 
         </div>
-        <div class="col-xl-4 ">
+        <div class="col-xl-4" ng-class="{'grayscale': models.view != 'all' && models.view != 'vip'}">
             <div class="col-xs-10 center-block vip clickable" ng-click="functions.setView('vip')">
                 <p>
                     תוכנית מותאמת אישית לרצונות ולצרכים שלך!
@@ -131,7 +131,7 @@
         </div>
     </div>
 
-    <div class="row clearfix" ng-if="models.view === 'vip'">
+    <div class="row clearfix" ng-if="models.view === 'vip' || models.view === 'all'">
         <div class="col-xs-15 text-center service">
             <img src="/content/images/private-home/car.png" alt="רכב" />
             <h3 class="font-bold">שירות לרכב ולנהג פרטי</h3>

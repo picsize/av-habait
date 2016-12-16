@@ -2,7 +2,8 @@
     <div class="row">
         <div class="col-xs-12">
             <div class="col-xs-4 text-center">
-                <h1 class="font-bold">{{models.category[0].Name}}</h1>
+                <h1 class="font-bold" ng-if="models.filter.category === 0">{{models.category[0].SubCategories[0].Name}}</h1>
+                <h1 class="font-bold" ng-if="models.filter.category !== 0">{{models.subCategory}}</h1>
             </div>
             <div class="col-xs-8 light-gray font-bold big-font">מה התקלה</div>
         </div>
@@ -13,18 +14,36 @@
                 <form>
                     <div class="row form-group">
                         <div class="col-xs-12 col-sm-6">
-                            <label>איזור שירות</label>
-                            <input type="text" ng-model="models.area"/>
+                            <label>איזור שירות</label><br />
+                            <input type="text" ng-model="models.filter.area" class="form-control" />
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <label>סינון לפי</label><br />
+                            <select type="text" ng-model="models.filter.category" class="form-control" ng-change="functions.setSubCategories()">
+                                <option ng-repeat="category in models.categories track by $index" ng-if="category.ParentId === 0" value="{{category.Id}}">{{category.Name}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row form-group" ng-if="models.filter.category !== 0 && models.subCategories.length > 0">
+                        <div class="col-xs-12 col-sm-6">
+                            <label>סוג התקלה</label><br />
+                            <select type="text" ng-model="models.filter.subCategory" class="form-control" ng-change="functions.showSubInfo()">
+                                <option ng-repeat="subCategory in models.subCategories track by $index" value="{{subCategory.Id}}">{{subCategory.Name}}</option>
+                            </select>
                         </div>
                     </div>
                 </form>
             </div>
-        </div>        
+        </div>
     </div>
     <div class="row get-price">
-        <div class="col-xs-4 text-center">
+        <div class="col-xs-4 text-center" ng-if="models.filter.category === 0">
             <h2 class="font-bold big-font">{{models.category[0].SubCategories[0].Name}}</h2>
             <span class="the-price font-bold">{{models.category[0].SubCategories[0].AvgPrice}} ש"ח</span>
+        </div>
+        <div class="col-xs-4 text-center" ng-if="models.filter.category !== 0">
+            <h2 class="font-bold big-font">{{models.subCategory}}</h2>
+            <span class="the-price font-bold">{{models.price}} ש"ח</span>
         </div>
         <div class="col-xs-7 col-xs-offset-1">
             <h3 class="big-font light-gray font-bold">קבל מחיר</h3>
@@ -35,7 +54,7 @@
                 <li class="font-light">יש כתובת לכל בעיה ותלונה</li>
                 <li class="font-light">ניקיון אחרי תיקון התקלה</li>
             </ul>
-            <input type="image" src="/content/images/orderGray.png" data-toggle="modal" data-target="#order"/>
+            <input type="image" src="/content/images/orderGray.png" data-toggle="modal" data-target="#order" />
         </div>
     </div>
 </section>

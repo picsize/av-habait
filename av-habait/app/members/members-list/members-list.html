@@ -1,6 +1,22 @@
 ﻿
 <section class="members-list container-fluid">
     <div class="row clearfix">
+        <div class="col-xs-8 calculator center-block">
+            <form>
+                <div class="row form-group">
+                    <div class="col-xs-12 col-sm-6">
+                        <label>איזור שירות</label><br />
+                        <input type="text" ng-model="models.filter.area" class="form-control" />
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <label>סינון לפי</label><br />
+                        <select type="text" ng-model="models.filter.category" class="form-control" ng-change="functions.findBusiness()">
+                            <option ng-repeat="category in models.categories track by $index" ng-if="category.ParentId === 0" value="{{category.Slug}}">{{category.Name}}</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
         <div class="col-xs-8 center-block list-holder">
             <div class="row list-title">
                 <div class="col-xs-12">

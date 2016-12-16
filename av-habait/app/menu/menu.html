@@ -18,17 +18,16 @@
                     <div class="col-xs-12 col-lg-10 col-md-10 col-sm-10">
                         <ul class="nav navbar-nav">
                             <li><a ui-sref="website.home">דף הבית</a></li>
-                            <li><a>מי אנחנו</a></li>
-                            <li><a href="http://picsize-010-site2.anytempurl.com/#home-categories">סיווגים ותקלות</a></li>
-                            <li><a href="http://picsize-010-site2.anytempurl.com/#how-does-it-works">איך זה עובד</a></li>
-                            <li><a href="http://picsize-010-site2.anytempurl.com/#why">מדוע זה כדאי לי</a></li>
-                            <li><a ui-sref="website.addMember">בעל מקצוע הצטרף</a></li>
-                            <li><a href="http://picsize-010-site2.anytempurl.com/#services">מוצרי החברה</a></li>
+                            <li><a ui-sref="website.about">מי אנחנו</a></li>
+                            <li><a ng-click="navigateToSection('home-categories')" href="">סיווגים ותקלות</a></li>
+                            <li><a ng-click="navigateToSection('how-does-it-works')" href="">איך זה עובד</a></li>
+                            <li><a ng-click="navigateToSection('why')" href="">מדוע זה כדאי לי</a></li>
+                            <li><a ui-sref="website.memberJoin">בעל מקצוע הצטרף</a></li>
                             <li><a>מידע נוסף</a></li>
-                            <li><a>אפליקציה</a></li>
-                            <li><a>ערוץ וידאו</a></li>
+                            <!--<li><a>אפליקציה</a></li>-->
+                            <!--<li><a>ערוץ וידאו</a></li>-->
                             <li><a>מחירון</a></li>
-                            <li><a>צור קשר</a></li>
+                            <li><a ui-sref="website.contact">צור קשר</a></li>
                         </ul>
                     </div>
                     <div class="col-xs-12 col-lg-2 col-md-2 col-sm-2 text-left">
@@ -40,22 +39,30 @@
                     </div>
                     <div class="col-xs-12 col-lg-8 col-md-8 col-sm-8 quickMenu">
                         <div class="col-xs-12 col-lg-2 col-md-2 col-sm-2">
-                            <img src="/content/images/officeIcon.png" alt="אב הבית למשרדים ועסקים"/>
+                            <a ui-sref="website.forBusinessAndOffice">
+                                <img src="/content/images/officeIcon.png" alt="אב הבית למשרדים ועסקים" />
+                            </a>
                         </div>
                         <div class="col-xs-12 col-lg-2 col-md-2 col-sm-2">
-                            <a ui-sref="website.vip.forHome" title="אב הבית פרטי"><img src="/content/images/privateHomeIcon.png" alt="אב הבית פרטי" /></a>
+                            <a ui-sref="website.vip.forHome" title="אב הבית פרטי">
+                                <img src="/content/images/privateHomeIcon.png" alt="אב הבית פרטי" />
+                            </a>
                         </div>
                         <div class="col-xs-12 col-lg-2 col-md-2 col-sm-2">
-                            <img src="/content/images/departmentIcon.png" alt="אב הבית למשכירי דירות"/>
+                            <a ui-sref="website.forAppartmentRent">
+                                <img src="/content/images/departmentIcon.png" alt="אב הבית למשכירי דירות" />
+                            </a>
                         </div>
                         <div class="col-xs-12 col-lg-2 col-md-2 col-sm-2">
-                            <img src="/content/images/reovationIcon.png" alt="אז הבית שיפוצים"/>
+                            <a ui-sref="website.forRenovation">
+                                <img src="/content/images/reovationIcon.png" alt="אז הבית שיפוצים" />
+                            </a>
                         </div>
                         <div class="col-xs-12 col-lg-2 col-md-2 col-sm-2">
-                            <img src="/content/images/manageDepartmentIcon.png" alt="אב הבית ועדי בתים"/>
+                            <img src="/content/images/manageDepartmentIcon.png" alt="אב הבית ועדי בתים" />
                         </div>
                         <div class="col-xs-12 col-lg-2 col-md-2 col-sm-2">
-                            <img src="/content/images/gravestoneIcon.png" alt="אב הבית שימור מצבות"/>
+                            <img src="/content/images/gravestoneIcon.png" alt="אב הבית שימור מצבות" />
                         </div>
                     </div>
                 </div>

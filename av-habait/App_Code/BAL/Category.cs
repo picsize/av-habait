@@ -23,6 +23,7 @@ namespace av_habait.App_Code.BAL
         public int ParentId { get; private set; }
         public string Slug { get; private set; }
         public int ViewOrder { get; private set; }
+        public int QuestionORder { get; private set; }
         public List<Category> SubCategories { get; private set; }
 
         #endregion
