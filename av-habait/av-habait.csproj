@@ -151,6 +151,8 @@
     <Content Include="app\members\member.html" />
     <Content Include="app\menu\menu.html" />
     <Content Include="app\menu\menu.js" />
+    <Content Include="app\pages\gravestone.html" />
+    <Content Include="app\pages\house-committees.html" />
     <Content Include="app\pages\renovation.html" />
     <Content Include="app\pages\business-and-office.html" />
     <Content Include="app\pages\appartment-rent.html" />
@@ -224,6 +226,7 @@
     <Content Include="content\images\facebook.png" />
     <Content Include="content\images\fastOrderIcon.png" />
     <Content Include="content\images\goldpro.png" />
+    <Content Include="content\images\gravestone.jpg" />
     <Content Include="content\images\gravestoneIcon.png" />
     <Content Include="content\images\howitWorks.png" />
     <Content Include="content\images\leftArrow.png" />

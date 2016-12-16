@@ -145,7 +145,16 @@ avBait.config(function ($locationProvider, $stateProvider, $urlRouterProvider, $
             templateUrl: 'app/pages/renovation.html',
             data: { pageTitle: 'אב הבית שיפוצים' }
         })
-
+        .state('website.houseCommittees', {
+            url: '/אב-הבית-לועדי-בתים',
+            templateUrl: 'app/pages/house-committees.html',
+            data: { pageTitle: 'אב הבית ועדי בתים' }
+        })
+        .state('website.gravestone', {
+            url: '/אב-הבית-שימור-מצבות',
+            templateUrl: 'app/pages/gravestone.html',
+            data: { pageTitle: 'אב הבית שימור מצבות' }
+        })
 
     $locationProvider.html5Mode({
         enabled: true,
