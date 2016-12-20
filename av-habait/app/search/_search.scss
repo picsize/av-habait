@@ -32,9 +32,13 @@ form {
 
     .search-results {
         list-style: none !important;
-        background: rgba(255,255,255,.3);
+        background: rgba(255,255,255,.7);
         border-bottom-left-radius: 1rem;
         border-bottom-right-radius: 1rem;
+        position: absolute;
+        width: 95%;
+        z-index: 9;
+        box-shadow: 0px 0px 8px #888888;
 
         li {
             display: block !important;
