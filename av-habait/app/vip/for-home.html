@@ -16,17 +16,14 @@
     <div class="row clearfix">
         <div class="col-xl-4" ng-class="{'grayscale': models.view != 'all' && models.view != 'regular'}">
             <div class="col-xs-10 center-block regular clickable" ng-click="functions.setView('regular')">
-                <p>מגוון שירותים בטלפון אחד. חייג ואנו נדאג לכל השאר</p>
+                <p>במסלול הרגיל כל השירותים ניתנים ללא דמי מנוי. שירות לרכב ולנהג הפרטי, תיקונים לבית, שירות לבעלי החיים. לכל שירות או תיקון תקלה מחיר ידוע מראש.</p>
             </div>
 
         </div>
         <div class="col-xl-4" ng-class="{'grayscale': models.view != 'all' && models.view != 'gold'}">
             <div class="col-xs-10 center-block gold clickable" ng-click="functions.setView('gold')">
                 <p>
-                    השירות ניתן בין השעות 8:00-17:00
-                    הודעות ובקשות יימסרו יום קודם עד השעה 17:00
-                    שירות בית מרקחת מוגבל לתרופות מרשם בלבד.
-
+                    במסלול זהב מנוי חודשי לשירותי רכב, שירות לבלי חיים, תיקונים לבית, שירותי שליחים, שירות לבילוי ולשעות הפנאי ללא עלות!
                 </p>
             </div>
 
@@ -34,7 +31,7 @@
         <div class="col-xl-4" ng-class="{'grayscale': models.view != 'all' && models.view != 'vip'}">
             <div class="col-xs-10 center-block vip clickable" ng-click="functions.setView('vip')">
                 <p>
-                    תוכנית מותאמת אישית לרצונות ולצרכים שלך!
+                    במסלול VIP התכנית מותאמת אישית. חליפה המותאמת לרצונות ולצרכיך שלך. שירותי רכב, שירות לבלי חיים, תיקונים לבית, שירותי שליחים, שירות לבילוי ולשעות הפנאי ללא עלות!
                 </p>
             </div>
 
@@ -209,7 +206,7 @@
 
     </div>
 
-    <div class="row clearfix">
+    <div class="row clearfix" ng-if="models.view === 'regular' || models.view === 'gold' || models.view === 'vip'">
         <div class="container">
             <div class="form-holder col-xs-8">
                 <form class="plan-form form-inline">

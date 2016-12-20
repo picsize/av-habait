@@ -407,7 +407,7 @@ home-how-does-it-works h2 {
 
 home-how-does-it-works .how {
   background: url(/content/images/bgDottes.png) no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   padding-top: 2rem;
   height: 51rem; }
   home-how-does-it-works .how ul {
