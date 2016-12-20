@@ -251,6 +251,7 @@
     <Content Include="content\images\private-home\fixicon.png" />
     <Content Include="content\images\private-home\joy.png" />
     <Content Include="content\images\private-home\joyicon.png" />
+    <Content Include="content\images\private.jpg" />
     <Content Include="content\images\privateHomeIcon.png" />
     <Content Include="content\images\productBG.png" />
     <Content Include="content\images\quickOrderIcon.png" />
@@ -1175,6 +1176,7 @@
     <Content Include="lib\font-awesome-4.6.3\scss\_screen-reader.scss" />
     <Content Include="lib\font-awesome-4.6.3\scss\_stacked.scss" />
     <Content Include="lib\font-awesome-4.6.3\scss\_variables.scss" />
+    <None Include="Properties\PublishProfiles\ftp lihi.pubxml" />
     <None Include="Properties\PublishProfiles\ftp.pubxml" />
     <Content Include="styles\main.css">
       <DependentUpon>main.scss</DependentUpon>
