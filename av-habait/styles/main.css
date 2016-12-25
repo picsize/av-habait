@@ -145,6 +145,8 @@ html, body {
     background-size: contain !important;
     height: 33rem;
     background-position: 100% !important; }
+    .big-banner .fast:hover, .big-banner .rating:hover {
+      opacity: 0.8; }
   .big-banner .fast {
     background: url(/content/images/120.png) no-repeat;
     margin-right: 12rem; }
@@ -283,9 +285,13 @@ form {
       color: #294d52; }
   form .search-results {
     list-style: none !important;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.7);
     border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem; }
+    border-bottom-right-radius: 1rem;
+    position: absolute;
+    width: 95%;
+    z-index: 9;
+    box-shadow: 0px 0px 8px #888888; }
     form .search-results li {
       display: block !important;
       font-size: 2rem !important;
@@ -666,8 +672,9 @@ home-how-does-it-works .how {
     background: url(/content/images/pathFast.png) no-repeat;
     height: 17rem;
     position: relative;
-    top: 4rem;
-    right: 5rem; }
+    top: 0;
+    right: 5rem;
+    background-size: 100% 100%; }
     .choose .path_120:before {
       content: "";
       width: 72px;
@@ -752,7 +759,12 @@ home-how-does-it-works .how {
     width: 100%;
     margin-top: 2rem; }
   .banner-rating span {
-    font-size: 4rem; }
+    font-size: 2.5rem; }
+  .banner-rating hr {
+    width: 30%; }
+  .banner-rating small {
+    display: block;
+    font-size: 1.7rem; }
   .banner-rating .col-xs-4 span {
     display: block;
     color: #f2f1f1;
@@ -906,7 +918,8 @@ home-how-does-it-works .how {
       border-bottom: 1px solid #d0cfcf; }
     .members-list .member li > div {
       display: inline-block;
-      width: 13.8%;
+      /*width: 13.8%;*/
+      width: 16%;
       color: #337ab7;
       height: 70px; }
       .members-list .member li > div:not(:last-child) {
@@ -1094,8 +1107,7 @@ home-how-does-it-works .how {
 /* Portrait phones and smaller */
 #rating-small-order {
   width: 12%;
-  position: fixed;
-  left: 47.5rem; }
+  position: fixed; }
   #rating-small-order.absolute {
     position: absolute;
     width: 16%;
@@ -1104,6 +1116,20 @@ home-how-does-it-works .how {
   #rating-small-order:hover {
     cursor: pointer; }
 
+/* X-Large desktops and laptops */
+@media (min-width: 1600px) {
+  #rating-small-order {
+    left: 47.5rem; } }
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) and (max-width: 1600px) {
+  #rating-small-order {
+    left: 33.7rem; } }
+
+/* Landscape tablets and medium desktops */
+/* Portrait tablets and small desktops */
+/* Landscape phones and portrait tablets */
+/* Portrait phones and smaller */
 .banner-page {
   background: url(/content/images/aboutUs.png) no-repeat;
   background-size: 100% 100%;

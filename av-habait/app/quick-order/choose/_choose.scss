@@ -35,8 +35,9 @@
         background: url(/content/images/pathFast.png) no-repeat;
         height: 17rem;
         position: relative;
-        top: 4rem;
+        top: 0;
         right: 5rem;
+        background-size:100% 100%;
 
         &:before {
             content: "";
