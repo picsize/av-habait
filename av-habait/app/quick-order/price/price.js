@@ -17,7 +17,7 @@ avBait.component('price', {
                 category: 0,
                 subCategory: 0
             },
-            showPrice:false
+            showPrice: false
         }
 
         $scope.functions = {
@@ -37,8 +37,8 @@ avBait.component('price', {
                             $rootScope.models.category = JSON.parse(response.data.d).category;
                         }
                     }, function (error) { });
-                } 
-                
+                }
+
 
                 Service.post($scope.models.baseUrl, 'getCategories').then(function (response) {
                     if (JSON.parse(response.data.d).state === 1) {
@@ -72,6 +72,10 @@ avBait.component('price', {
                         $scope.models.showPrice = true;
                     }
                 });
+            },
+
+            goToOrder: function () {
+                $state.go('website.quickOrder.order');
             }
         }
 

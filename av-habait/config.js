@@ -59,6 +59,11 @@ avBait.config(function ($locationProvider, $stateProvider, $urlRouterProvider, $
                 }
             }
         })
+        .state('website.quickOrder.order', {
+            url: '/הזמנה-מהירה/ביצוע-הזמנה',
+            templateUrl: 'app/quick-order/order/main.html',
+            data: { pageTitle: 'הזמנה' }
+        })
         .state('website.rating', {
             abstract: true,
             templateUrl: 'app/rating/rating.html'

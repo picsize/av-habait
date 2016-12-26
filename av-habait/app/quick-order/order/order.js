@@ -16,14 +16,7 @@ avBait.component('order', {
         }
 
         $scope.functions = {
-            service: function (handler, data) {
-                return $http({
-                    url: $scope.models.baseUrl + handler,
-                    method: 'POST',
-                    data: (data !== undefined) ? JSON.stringify(data) : '',
-                    contentType: 'application/json'
-                });
-            },
+           
 
             init: function () {
                 $scope.models.order.category = $rootScope.models.category;
@@ -43,7 +36,6 @@ avBait.component('order', {
                     msg: email,
                     to: 'shay.avr1911@gmail.com'
                 }).then(function (response) {
-                    debugger;
                 }, function (error) { });
             }
         }

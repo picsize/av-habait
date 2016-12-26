@@ -163,6 +163,7 @@
     <Content Include="app\pages\about.html" />
     <Content Include="app\pricing\choose.html" />
     <Content Include="app\pricing\main.html" />
+    <Content Include="app\quick-order\order\main.html" />
     <Content Include="app\quick-order\order\order.html" />
     <Content Include="app\quick-order\order\order.js" />
     <Content Include="app\quick-order\price\price.html" />
