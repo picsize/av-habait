@@ -169,6 +169,16 @@ avBait.config(function ($locationProvider, $stateProvider, $urlRouterProvider, $
             templateUrl: 'app/pricing/choose.html',
             data: { pageTitle: 'מחירון אב הבית' }
         })
+        .state('website.article1', {
+            url: '/טכנאי-מייבשי-כביסה',
+            templateUrl: 'app/articles/article1.html',
+            data: { pageTitle: 'טכנאי מייבשי כביסה' }
+        })
+        .state('website.profile', {
+            url: '/פרופיל',
+            templateUrl: 'app/profile/main.html',
+            data: { pageTitle: 'פרופיל משתמש' }
+        })
 
     $locationProvider.html5Mode({
         enabled: true,

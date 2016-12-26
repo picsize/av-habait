@@ -1,7 +1,7 @@
 ﻿
 .for-home {
     .row{
-        &:first-of-type{
+        &.vip-page-header{
             background-image:url(/content/images/private.jpg);
         }
     }

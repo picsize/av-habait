@@ -820,7 +820,7 @@ home-how-does-it-works .how {
 /* Portrait tablets and small desktops */
 /* Landscape phones and portrait tablets */
 /* Portrait phones and smaller */
-.for-home .row:first-of-type {
+.for-home .row.vip-page-header {
   background-image: url(/content/images/private.jpg); }
 
 .for-home .page-image:after {
