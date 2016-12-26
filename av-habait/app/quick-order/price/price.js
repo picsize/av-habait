@@ -16,24 +16,39 @@ avBait.component('price', {
                 area: '',
                 category: 0,
                 subCategory: 0
-            }
+            },
+            showPrice:false
         }
 
         $scope.functions = {
             init: function () {
-                if ($scope.stateParams.subCategorySlug !== '') {    
-                    Service.post($scope.models.baseUrl, 'getSubCategoryInfo', { slug: $scope.stateParams.subCategorySlug }).then(function (response) {
+                //if ($scope.stateParams.subCategorySlug !== '') {
+                //    Service.post($scope.models.baseUrl, 'getSubCategoryInfo', { slug: $scope.stateParams.subCategorySlug }).then(function (response) {
+                //        if (JSON.parse(response.data.d).state === 1) {
+                //            $scope.models.category = JSON.parse(response.data.d).category;
+                //            $rootScope.models.category = JSON.parse(response.data.d).category;
+                //        }
+                //    }, function (error) { });
+                //}
+                if ($scope.stateParams.categorySlug !== '') {
+                    Service.post($scope.models.baseUrl, 'getCategoryInfo', { slug: $scope.stateParams.categorySlug }).then(function (response) {
                         if (JSON.parse(response.data.d).state === 1) {
                             $scope.models.category = JSON.parse(response.data.d).category;
                             $rootScope.models.category = JSON.parse(response.data.d).category;
                         }
                     }, function (error) { });
-                }
+                } 
                 
 
                 Service.post($scope.models.baseUrl, 'getCategories').then(function (response) {
                     if (JSON.parse(response.data.d).state === 1) {
                         $scope.models.categories = JSON.parse(response.data.d).categories;
+                        $scope.models.categories.forEach(function (elem) {
+                            if (elem.Id === $scope.models.category.Id * 1) {
+                                $scope.models.filter.category = elem;
+                                $scope.models.selectedCategory = elem.Name;
+                            }
+                        });
                         console.log('$scope.models.categories', $scope.models.categories)
                     }
                 }, function (error) { });
@@ -54,6 +69,7 @@ avBait.component('price', {
                     if (elem.Id === $scope.models.filter.subCategory * 1) {
                         $scope.models.subCategory = elem.Name;
                         $scope.models.price = elem.AvgPrice;
+                        $scope.models.showPrice = true;
                     }
                 });
             }

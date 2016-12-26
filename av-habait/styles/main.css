@@ -105,6 +105,8 @@ html, body {
   padding: 0.7rem 0;
   background: #fff;
   margin-bottom: 0; }
+  .navbar li a:hover {
+    cursor: pointer; }
 
 .quickMenu img {
   width: 100%; }
@@ -130,6 +132,20 @@ html, body {
   background-position: 100% 0;
   background-size: contain;
   margin-left: 1.5rem; }
+
+.loginBtn, .facebook-login {
+  color: #fff;
+  width: 80%;
+  background-size: 100% 100%;
+  border: none; }
+  .loginBtn:hover, .facebook-login:hover {
+    color: #fff; }
+
+.loginBtn {
+  background-image: url(/content/images/loginBtn.png); }
+
+.facebook-login {
+  background-image: url(/content/images/facebookLogin.png); }
 
 .big-banner {
   height: 81rem;
@@ -285,13 +301,14 @@ form {
       color: #294d52; }
   form .search-results {
     list-style: none !important;
-    background: rgba(255, 255, 255, 0.7);
+    background: #fff;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     position: absolute;
-    width: 95%;
+    width: 86%;
     z-index: 9;
-    box-shadow: 0px 0px 8px #888888; }
+    box-shadow: 0 0 8px #888;
+    margin-right: 1.7rem; }
     form .search-results li {
       display: block !important;
       font-size: 2rem !important;
@@ -363,21 +380,32 @@ home-categories {
   home-categories .category {
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    height: 12rem;
+    background-image: url(/content/images/caterogyGeneral.png);
+    height: 10rem;
     width: 100%;
     margin-right: 3.5rem;
     margin-top: 3rem; }
     home-categories .category h3 {
-      padding-right: 3.5rem;
+      /*padding-right: 3.5rem;*/
       font-size: 3rem;
-      margin-top: 1rem;
-      padding-top: 1rem; }
+      /*margin-top: 1rem;
+            padding-top: 1rem;*/ }
+      home-categories .category h3 img {
+        width: 40px;
+        position: absolute;
+        top: 1.3rem;
+        right: 9rem; }
+      home-categories .category h3 label {
+        position: absolute;
+        top: 1.2rem;
+        right: 15rem; }
     home-categories .category ul {
       list-style: none;
       padding: 0;
-      margin: 3rem 1rem;
+      margin: 0 2rem;
       overflow: hidden;
-      height: 40px; }
+      height: 90px;
+      padding-top: 3rem; }
       home-categories .category ul li {
         display: inline-block; }
         home-categories .category ul li:not(.hidden-subcategory):not(:last-of-type) a {
@@ -612,18 +640,32 @@ home-how-does-it-works .how {
   .quick-order-categories .category {
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    height: 13rem;
+    background-image: url(/content/images/caterogyGeneral.png);
+    height: 10rem;
     width: 100%;
-    margin-bottom: 5rem; }
+    margin-right: 3.5rem;
+    margin-top: 3rem; }
     .quick-order-categories .category h3 {
-      padding-right: 3.5rem;
+      /*padding-right: 3.5rem;*/
       font-size: 3rem;
-      margin-top: 1rem;
-      padding-top: 1rem; }
+      /*margin-top: 1rem;
+            padding-top: 1rem;*/ }
+      .quick-order-categories .category h3 img {
+        width: 40px;
+        position: absolute;
+        top: 1.3rem;
+        right: 9rem; }
+      .quick-order-categories .category h3 label {
+        position: absolute;
+        top: 1.2rem;
+        right: 15rem; }
     .quick-order-categories .category ul {
       list-style: none;
       padding: 0;
-      margin: 3rem 1rem; }
+      margin: 0 2rem;
+      overflow: hidden;
+      height: 90px;
+      padding-top: 3rem; }
       .quick-order-categories .category ul li {
         display: inline-block; }
         .quick-order-categories .category ul li:not(:last-child):after {
@@ -720,7 +762,7 @@ home-how-does-it-works .how {
 
 .price .calculator {
   background-color: #ebe9e9;
-  /*padding: 5%;*/
+  padding: 1%;
   border-radius: 2rem; }
 
 .price .get-price {
@@ -778,6 +820,9 @@ home-how-does-it-works .how {
 /* Portrait tablets and small desktops */
 /* Landscape phones and portrait tablets */
 /* Portrait phones and smaller */
+.for-home .row:first-of-type {
+  background-image: url(/content/images/private.jpg); }
+
 .for-home .page-image:after {
   content: "";
   width: 150px;

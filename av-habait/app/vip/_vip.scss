@@ -1,5 +1,11 @@
 ﻿
 .for-home {
+    .row{
+        &:first-of-type{
+            background-image:url(/content/images/private.jpg);
+        }
+    }
+
     .page-image {
         &:after {
             content: "";

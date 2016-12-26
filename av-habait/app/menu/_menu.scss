@@ -4,7 +4,15 @@
     border-radius: 0 !important;
     padding: 0.7rem 0;
     background: #fff;
-    margin-bottom:0;
+    margin-bottom: 0;
+
+    li{
+        a{
+            &:hover{
+                cursor:pointer;
+            }
+        }
+    }
 }
 
 .quickMenu img {
@@ -19,23 +27,39 @@
 
 .register, .login {
     text-indent: 45%;
-    outline:none;
+    outline: none;
 }
 
 .login {
     background-image: url(/content/images/login.png);
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-position: 100% 0;
     background-size: contain;
 }
 
 .register {
     background-image: url(/content/images/register.png);
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-position: 100% 0;
     background-size: contain;
     margin-left: 1.5rem;
 }
 
+.loginBtn, .facebook-login {
+    color: #fff;
+    width: 80%;
+    background-size: 100% 100%;
+    border: none;
 
+    &:hover {
+        color: #fff;
+    }
+}
 
+.loginBtn {
+    background-image: url(/content/images/loginBtn.png);
+}
+
+.facebook-login {
+    background-image: url(/content/images/facebookLogin.png);
+}

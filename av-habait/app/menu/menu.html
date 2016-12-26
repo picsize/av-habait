@@ -19,22 +19,22 @@
                         <ul class="nav navbar-nav">
                             <li><a ui-sref="website.home">דף הבית</a></li>
                             <li><a ui-sref="website.about">מי אנחנו</a></li>
-                            <li><a ng-click="navigateToSection('home-categories')" href="">סיווגים ותקלות</a></li>
-                            <li><a ng-click="navigateToSection('how-does-it-works')" href="">איך זה עובד</a></li>
-                            <li><a ng-click="navigateToSection('why')" href="">מדוע זה כדאי לי</a></li>
+                            <li><a ng-click="functions.navigateToSection('home-categories')">סיווגים ותקלות</a></li>
+                            <li><a ng-click="functions.navigateToSection('how-does-it-works')">איך זה עובד</a></li>
+                            <li><a ng-click="functions.navigateToSection('why')">מדוע זה כדאי לי</a></li>
                             <li><a ui-sref="website.memberJoin">בעל מקצוע הצטרף</a></li>
                             <li><a>מידע נוסף</a></li>
                             <!--<li><a>אפליקציה</a></li>-->
                             <!--<li><a>ערוץ וידאו</a></li>-->
-                            <li><a>מחירון</a></li>
+                            <li><a ui-sref="website.pricing.choose">מחירון</a></li>
                             <li><a ui-sref="website.contact">צור קשר</a></li>
                         </ul>
                     </div>
                     <div class="col-xs-12 col-lg-2 col-md-2 col-sm-2 text-left">
                         <nav>
-                            <button type="button" class="white-btn register">הרשמה</button>
+                            <button type="button" class="white-btn register" data-target="#register-popup" data-toggle="modal">הרשמה</button>
                             <span>|</span>
-                            <button type="button" class="white-btn login">התחברות</button>
+                            <button type="button" class="white-btn login" data-target="#login-popup" data-toggle="modal">התחברות</button>
                         </nav>
                     </div>
                     <div class="col-xs-12 col-lg-8 col-md-8 col-sm-8 quickMenu">
@@ -78,3 +78,90 @@
 
 </section>
 
+<div class="modal fade" id="register-popup" tabindex="-1" role="dialog" aria-labelledby="register-popup">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title text-center center-block font-bold">הרשמה</h3>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-12 col-lg-8 col-md-8 col-sm-8 center-block">
+                        <form role="form">
+                            <div class="row form-group">
+                                <label>דואר אלקטרוני</label>
+                                <input type="text" class="form-control">
+                            </div>
+
+                            <div class="row form-group">
+                                <label>סיסמא</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="row form-group">
+                                <label>שם מלא</label>
+                                <input type="text" class="form-control">
+                            </div>
+
+                            <div class="row form-group">
+                                <label>טפלון נייד</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="row form-group">
+                                <label>כתובת</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <div class="row">
+                    <div class="col-xs-12 col-lg-6 col-md-6 col-sm-6 text-center">
+                        <button type="button" class="btn btn-default loginBtn">כניסה</button>
+                    </div>
+                    <div class="col-xs-12 col-lg-6 col-md-6 col-sm-6 text-center">
+                        <button type="button" class="btn btn-default facebook-login" ng-click="functions.facebookLogin()">כניסה באמצעות פייסבוק</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="login-popup" tabindex="-1" role="dialog" aria-labelledby="login-popup">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title text-center center-block font-bold">התחברות</h3>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-12 col-lg-8 col-md-8 col-sm-8 center-block">
+                        <form role="form">
+                            <div class="row form-group">
+                                <label>דואר אלקטרוני</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="row form-group">
+                                <label>סיסמא</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="row">
+                    <div class="col-xs-12 col-lg-6 col-md-6 col-sm-6 text-center">
+                        <button type="button" class="btn btn-default loginBtn">כניסה</button>
+                    </div>
+                    <div class="col-xs-12 col-lg-6 col-md-6 col-sm-6 text-center">
+                        <button type="button" class="btn btn-default facebook-login" ng-click="functions.facebookLogin()">כניסה באמצעות פייסבוק</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

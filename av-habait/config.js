@@ -155,6 +155,15 @@ avBait.config(function ($locationProvider, $stateProvider, $urlRouterProvider, $
             templateUrl: 'app/pages/gravestone.html',
             data: { pageTitle: 'אב הבית שימור מצבות' }
         })
+        .state('website.pricing', {
+            abstract: true,
+            templateUrl: 'app/pricing/main.html'
+        })
+        .state('website.pricing.choose', {
+            url: '/מחירון-אב-הבית',
+            templateUrl: 'app/pricing/choose.html',
+            data: { pageTitle: 'מחירון אב הבית' }
+        })
 
     $locationProvider.html5Mode({
         enabled: true,
@@ -164,7 +173,7 @@ avBait.config(function ($locationProvider, $stateProvider, $urlRouterProvider, $
 });
 
 
-avBait.run(function ($rootScope, $templateCache, $location, $anchorScroll, $urlRouter) {
+avBait.run(function ($window, $rootScope, $templateCache, $location, $anchorScroll, $urlRouter) {
     $rootScope.models = {};
     $rootScope.$on('$viewContentLoaded', function () {
         $templateCache.removeAll();
@@ -173,15 +182,14 @@ avBait.run(function ($rootScope, $templateCache, $location, $anchorScroll, $urlR
     //when the route is changed scroll to the proper element.
     $rootScope.$on('$locationChangeSuccess', function () {
         if (localStorage.getItem('hash')) {
-            setTimeout(function() {
+            setTimeout(function () {
                 $location.hash(localStorage.getItem('hash'));
                 $anchorScroll();
                 localStorage.removeItem('hash');
-            },500)
+            }, 500)
         }
-        
-    });
 
+    });
 });
 
 
