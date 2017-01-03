@@ -914,6 +914,15 @@ home-how-does-it-works .how {
     filter: grayscale(0%);
     opacity: 1; }
 
+/* Large desktops and laptops */
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .for-home .page-image:after {
+    width: 22px; } }
+
+/* Landscape tablets and medium desktops */
+/* Portrait tablets and small desktops */
+/* Landscape phones and portrait tablets */
+/* Portrait phones and smaller */
 .breadcrumbs ul {
   list-style: none;
   padding: 0; }

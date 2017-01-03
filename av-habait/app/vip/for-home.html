@@ -14,22 +14,22 @@
         </div>
     </div>
     <div class="row clearfix">
-        <div class="col-xl-4" ng-class="{'grayscale': models.view != 'all' && models.view != 'regular'}">
-            <div class="col-xs-10 center-block regular clickable" ng-click="functions.setView('regular')">
+        <div class="col-xl-4 col-md-4" ng-class="{'grayscale': models.view != 'all' && models.view != 'regular'}">
+            <div class="col-xs-10 col-md-12 col-xl-10 center-block regular clickable" ng-click="functions.setView('regular')">
                 <p>במסלול הרגיל כל השירותים ניתנים ללא דמי מנוי. שירות לרכב ולנהג הפרטי, תיקונים לבית, שירות לבעלי החיים. לכל שירות או תיקון תקלה מחיר ידוע מראש.</p>
             </div>
 
         </div>
-        <div class="col-xl-4" ng-class="{'grayscale': models.view != 'all' && models.view != 'gold'}">
-            <div class="col-xs-10 center-block gold clickable" ng-click="functions.setView('gold')">
+        <div class="col-xl-4 col-md-4" ng-class="{'grayscale': models.view != 'all' && models.view != 'gold'}">
+            <div class="col-xs-10 col-md-12 col-xl-10 center-block gold clickable" ng-click="functions.setView('gold')">
                 <p>
                     במסלול זהב מנוי חודשי לשירותי רכב, שירות לבלי חיים, תיקונים לבית, שירותי שליחים, שירות לבילוי ולשעות הפנאי ללא עלות!
                 </p>
             </div>
 
         </div>
-        <div class="col-xl-4" ng-class="{'grayscale': models.view != 'all' && models.view != 'vip'}">
-            <div class="col-xs-10 center-block vip clickable" ng-click="functions.setView('vip')">
+        <div class="col-xl-4 col-md-4" ng-class="{'grayscale': models.view != 'all' && models.view != 'vip'}">
+            <div class="col-xs-10 col-md-12 col-xl-10 center-block vip clickable" ng-click="functions.setView('vip')">
                 <p>
                     במסלול VIP התכנית מותאמת אישית. חליפה המותאמת לרצונות ולצרכיך שלך. שירותי רכב, שירות לבלי חיים, תיקונים לבית, שירותי שליחים, שירות לבילוי ולשעות הפנאי ללא עלות!
                 </p>
@@ -39,7 +39,7 @@
     </div>
 
     <div class="row clearfix" ng-if="models.view === 'regular'">
-        <div class="col-xs-15 text-center service">
+        <div class="col-xs-12 col-md-15 text-center service">
             <img src="/content/images/private-home/car.png" alt="רכב" />
             <h3 class="font-bold">שירות לרכב ולנהג פרטי</h3>
             <ul>
@@ -51,7 +51,7 @@
 
             </ul>
         </div>
-        <div class="col-xs-15 text-center service">
+        <div class="col-xs-12 col-md-15 text-center service">
             <img src="/content/images/private-home/fix.png" alt="תיקנים לבית" />
             <h3 class="font-bold">תיקונים לבית</h3>
             <ul>
@@ -62,7 +62,7 @@
                 <li><strong>ב'אב הבית', כל בעלי המקצוע בפיקוח ואחריות, במחיר הגון וידוע מראש.</strong> </li>
             </ul>
         </div>
-        <div class="col-xs-15 text-center service">
+        <div class="col-xs-12 col-md-15 text-center service">
             <img src="/content/images/private-home/animals.png" alt="חיות" />
             <h3 class="font-bold">חיות</h3>
             <ul>
@@ -75,7 +75,7 @@
     </div>
 
     <div class="row clearfix" ng-if="models.view === 'gold'">
-        <div class="col-xs-15 text-center service">
+        <div class="col-xs-12 col-md-15 text-center service">
             <img src="/content/images/private-home/car.png" alt="רכב" />
             <h3 class="font-bold">שירות לרכב ולנהג פרטי</h3>
             <ul>
@@ -84,7 +84,7 @@
                 <li>(לא כולל רחיצה, נהג פרטי והסעה לחוגים)</li>
             </ul>
         </div>
-        <div class="col-xs-15 text-center service">
+        <div class="col-xs-12 col-md-15 text-center service">
             <img src="/content/images/private-home/fix.png" alt="תיקנים לבית" />
             <h3 class="font-bold">תיקונים לבית</h3>
             <ul>
@@ -95,7 +95,7 @@
                 <li>(לא כולל חלקים)</li>
             </ul>
         </div>
-        <div class="col-xs-15 text-center service">
+        <div class="col-xs-12 col-md-15 text-center service">
             <img src="/content/images/private-home/joy.png" alt="הנאות" />
             <h3 class="font-bold">הנאות</h3>
             <ul>
@@ -103,7 +103,7 @@
                 <li>אנחנו נדאג לבצע את ההזמנה עבורכם- חינם!</li>
             </ul>
         </div>
-        <div class="col-xs-15 text-center service">
+        <div class="col-xs-12 col-md-15 text-center service">
             <img src="/content/images/private-home/animals.png" alt="חיות" />
             <h3 class="font-bold">חיות</h3>
             <ul>
@@ -114,7 +114,7 @@
                 <li>(לא כולל לקיחת בעל החיים לטיול)</li>
             </ul>
         </div>
-        <div class="col-xs-15 text-center service">
+        <div class="col-xs-12 col-md-15 text-center service">
             <img src="/content/images/private-home/delivery.png" alt="שליחויות" />
             <h3 class="font-bold">שליחויות</h3>
             <ul>
@@ -129,7 +129,7 @@
     </div>
 
     <div class="row clearfix" ng-if="models.view === 'vip' || models.view === 'all'">
-        <div class="col-xs-15 text-center service">
+        <div class="col-xs-12 col-md-15 text-center service">
             <img src="/content/images/private-home/car.png" alt="רכב" />
             <h3 class="font-bold">שירות לרכב ולנהג פרטי</h3>
             <ul>
@@ -139,14 +139,14 @@
 
             </ul>
         </div>
-        <div class="col-xs-15 text-center service">
+        <div class="col-xs-12 col-md-15 text-center service">
             <img src="/content/images/private-home/fix.png" alt="תיקנים לבית" />
             <h3 class="font-bold">תיקונים לבית</h3>
             <ul>
                 <li>כל שירות התיקונים בבית ללא השתתפות עצמית</li>
             </ul>
         </div>
-        <div class="col-xs-15 text-center service">
+        <div class="col-xs-12 col-md-15 text-center service">
             <img src="/content/images/private-home/joy.png" alt="הנאות" />
             <h3 class="font-bold">הנאות</h3>
             <ul>
@@ -154,7 +154,7 @@
                 <li>אנחנו נדאג לבצע את ההזמנה עבורכם- חינם!</li>
             </ul>
         </div>
-        <div class="col-xs-15 text-center service">
+        <div class="col-xs-12 col-md-15 text-center service">
             <img src="/content/images/private-home/animals.png" alt="חיות" />
             <h3 class="font-bold">חיות</h3>
             <ul>
@@ -164,7 +164,7 @@
                 <li>השירות כולו ניתן חינם למשך שנה.</li>
             </ul>
         </div>
-        <div class="col-xs-15 text-center service">
+        <div class="col-xs-12 col-md-15 text-center service">
             <img src="/content/images/private-home/delivery.png" alt="שליחויות" />
             <h3 class="font-bold">שליחויות</h3>
             <ul>
@@ -239,7 +239,7 @@
                         <input type="submit" class="btn btn-primary" value="שלח" />
                     </div>
 
-                   
+
                 </form>
 
 
