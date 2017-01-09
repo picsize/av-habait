@@ -901,7 +901,7 @@ home-how-does-it-works .how {
   .for-home .form-holder .plan-form .form-group label {
     display: block; }
   .for-home .form-holder .plan-form .form-group:not(:first-child) {
-    margin-right: 3%; }
+    /*margin-right: 3%;*/ }
   .for-home .form-holder .plan-form .form-group:last-of-type {
     margin-top: 2rem; }
 
